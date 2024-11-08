@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dyrrk6832vmcu"]
+[gd_scene load_steps=2 format=3 uid="uid://dyrrk6832vmcu"]
+
+[ext_resource type="FontFile" uid="uid://bd5ggne14i6su" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_csr0x"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,14 +12,17 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 520.0
-offset_top = 288.0
-offset_right = 626.0
-offset_bottom = 328.0
+offset_left = 2.0
+offset_top = 53.0
+offset_right = 1150.0
+offset_bottom = 168.0
+theme_override_fonts/normal_font = ExtResource("1_csr0x")
+theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
-text = "[wave] fuck you karl"
+text = "[center][wave] fish"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

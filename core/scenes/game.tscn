@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://6bojolk12ix3"]
+
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_jhrn2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mb8t5"]
+radius = 23.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(61, 129)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.359375, 0.359375)
+texture = ExtResource("1_jhrn2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_mb8t5")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
