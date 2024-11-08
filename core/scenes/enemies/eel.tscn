@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0l5a7bn3vy6"]
+
+[ext_resource type="Script" path="res://eel.gd" id="1_xatvk"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="2_1w5oc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jhq"]
+size = Vector2(360, 122)
+
+[node name="Eel" type="StaticBody2D"]
+script = ExtResource("1_xatvk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(117, 0)
+scale = Vector2(2.82813, 1)
+texture = ExtResource("2_1w5oc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(117, -1)
+shape = SubResource("RectangleShape2D_c0jhq")

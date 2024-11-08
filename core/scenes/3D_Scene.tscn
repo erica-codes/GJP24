@@ -1,20 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://c47wqn8e3x3kp"]
+[gd_scene load_steps=6 format=3 uid="uid://c47wqn8e3x3kp"]
 
 [ext_resource type="Script" path="res://core/scripts/3D_Scene.gd" id="1_pkyk2"]
+[ext_resource type="Texture2D" uid="uid://wkc5cg4hjg7t" path="res://assets/portrait1.png" id="2_1wcnh"]
+[ext_resource type="PackedScene" uid="uid://ctb1xom2l2nqr" path="res://core/scenes/2D_Scene.tscn" id="3_axmtm"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7dmqn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vaxxk"]
+albedo_texture = ExtResource("2_1wcnh")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n6ck8"]
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_pkyk2")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0304724, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.91032)
-mesh = SubResource("BoxMesh_7dmqn")
+transform = Transform3D(1, 0, 0, 0, -0.014224, -0.999899, 0, 0.999899, -0.014224, 0, 0.112968, -2.91032)
+material_override = SubResource("StandardMaterial3D_vaxxk")
+mesh = SubResource("PlaneMesh_n6ck8")
 skeleton = NodePath("../Camera3D")
 
 [node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Node2D" parent="SubViewport" instance=ExtResource("3_axmtm")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewport"]
 

@@ -1,7 +1,44 @@
-[gd_scene format=3 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=6 format=3 uid="uid://ctb1xom2l2nqr"]
+
+[ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_qsmya"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_xljle"]
+[ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
+[ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/world.tscn" id="4_onaj4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4h3u2"]
+radius = 61.5385
+height = 132.923
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, -1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 323)
+
+[node name="fish" type="CharacterBody2D" parent="."]
+position = Vector2(86, 519)
+scale = Vector2(0.4375, 0.40625)
+script = ExtResource("1_qsmya")
+
+[node name="Icon" type="Sprite2D" parent="fish"]
+texture = ExtResource("1_xljle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fish"]
+shape = SubResource("CapsuleShape2D_4h3u2")
+
+[node name="Node2D" parent="." instance=ExtResource("3_t7nse")]
+position = Vector2(1118, 528)
+scale = Vector2(0.4375, 0.40625)
+
+[node name="World" parent="." instance=ExtResource("4_onaj4")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_top = 62.0
+offset_right = 1155.0
+offset_bottom = 182.0
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "[center]Press the left and arrow key to move. Space to jump. 
+Be careful, you can only jump [wave][rainbow]thrice :d"
