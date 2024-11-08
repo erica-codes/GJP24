@@ -10,7 +10,8 @@ radius = 61.5385
 height = 132.923
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(0, -1)
+metadata/_edit_horizontal_guides_ = [563.0, -33.0, -57.0]
+metadata/_edit_vertical_guides_ = [500.0, 1152.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 323)

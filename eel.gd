@@ -2,9 +2,9 @@ extends StaticBody2D
 
 @export var move_duration: float = 2.0 
 @export var wait_duration: float = 1.0  
-@export var start_position: Vector2
-@export var center_position: Vector2
-@export var end_position: Vector2
+@export var start_position: Vector2 = Vector2(1115, 563)  
+@export var center_position: Vector2 = Vector2(500, 563)  
+@export var end_position: Vector2 = Vector2(-50, 563)  
 
 func _ready():
 	position = start_position
