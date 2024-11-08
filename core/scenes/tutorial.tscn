@@ -44,6 +44,8 @@ height = 132.923
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
 metadata/_edit_vertical_guides_ = [776.0, 778.0]
 
+[node name="World" parent="." instance=ExtResource("4_onaj4")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 323)
 
@@ -68,14 +70,12 @@ shape = SubResource("CapsuleShape2D_4h3u2")
 position = Vector2(1118, 528)
 scale = Vector2(0.4375, 0.40625)
 
-[node name="World" parent="." instance=ExtResource("4_onaj4")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_top = 62.0
+offset_top = 131.0
 offset_right = 1155.0
-offset_bottom = 182.0
+offset_bottom = 251.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Press the left and arrow key to move. Space to jump. 
