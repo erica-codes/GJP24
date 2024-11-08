@@ -10,9 +10,9 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 478.0
-offset_top = 254.0
-offset_right = 1200.0
-offset_bottom = 294.0
+offset_left = 520.0
+offset_top = 288.0
+offset_right = 626.0
+offset_bottom = 328.0
 bbcode_enabled = true
 text = "[wave] fuck you karl"
