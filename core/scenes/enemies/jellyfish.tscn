@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyhqmkd8juv14"]
+
+[ext_resource type="Texture2D" uid="uid://wkc5cg4hjg7t" path="res://assets/portrait1.png" id="1_bp43t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eug8b"]
+radius = 33.0
+height = 172.0
+
+[node name="jellyfish" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27.625, -64.125)
+scale = Vector2(0.291992, 0.655273)
+texture = ExtResource("1_bp43t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27, -63)
+shape = SubResource("CapsuleShape2D_eug8b")

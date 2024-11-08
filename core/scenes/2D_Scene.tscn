@@ -1,9 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=12 format=3 uid="uid://ctb1xom2l2nqr"]
 
 [ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_qsmya"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_xljle"]
+[ext_resource type="Texture2D" uid="uid://dpxw4lofenabe" path="res://assets/fish(swim).png" id="2_dx4kd"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/world.tscn" id="4_onaj4"]
+[ext_resource type="PackedScene" uid="uid://dyhqmkd8juv14" path="res://core/scenes/enemies/jellyfish.tscn" id="5_b4tlg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipeqn"]
+atlas = ExtResource("2_dx4kd")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxifm"]
+atlas = ExtResource("2_dx4kd")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxx4f"]
+atlas = ExtResource("2_dx4kd")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8jqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipeqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxifm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxx4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4h3u2"]
 radius = 61.5385
@@ -11,7 +42,7 @@ height = 132.923
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [563.0, -33.0, -57.0]
-metadata/_edit_vertical_guides_ = [500.0, 1152.0]
+metadata/_edit_vertical_guides_ = [500.0, 1152.0, -165.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(577, 323)
@@ -21,7 +52,13 @@ position = Vector2(86, 519)
 scale = Vector2(0.4375, 0.40625)
 script = ExtResource("1_qsmya")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fish"]
+sprite_frames = SubResource("SpriteFrames_l8jqc")
+autoplay = "default"
+frame_progress = 0.191692
+
 [node name="Icon" type="Sprite2D" parent="fish"]
+visible = false
 texture = ExtResource("1_xljle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fish"]
@@ -43,3 +80,6 @@ theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Press the left and arrow key to move. Space to jump. 
 Be careful, you can only jump [wave][rainbow]thrice :d"
+
+[node name="jellyfish" parent="." instance=ExtResource("5_b4tlg")]
+position = Vector2(746, 805)
