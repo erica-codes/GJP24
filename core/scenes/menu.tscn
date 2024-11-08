@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+<<<<<<< Updated upstream
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -37,3 +38,33 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[wave] fuck you eca"
+||||||| Stash base
+=======
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 53.0
+offset_right = 1150.0
+offset_bottom = 168.0
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center][wave] fish"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -20.0
+offset_right = 53.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[wave] fuck you eca"
+>>>>>>> Stashed changes
