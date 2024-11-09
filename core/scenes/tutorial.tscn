@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_qsmya"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_xljle"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
-[ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/[NEW] fish for ur fisht.png" id="3_tas5v"]
+[ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="3_tas5v"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/world.tscn" id="4_onaj4"]
 [ext_resource type="PackedScene" uid="uid://dyhqmkd8juv14" path="res://core/scenes/enemies/jellyfish.tscn" id="5_b4tlg"]
 
@@ -72,7 +72,7 @@ script = ExtResource("1_qsmya")
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_l8jqc")
 autoplay = "default"
-frame_progress = 0.608834
+frame_progress = 0.16756
 
 [node name="Icon" type="Sprite2D" parent="fish"]
 visible = false

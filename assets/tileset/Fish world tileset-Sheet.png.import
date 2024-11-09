@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpxw4lofenabe"
-path="res://.godot/imported/fish(swim).png-a34d20e85165d93ad0857f2240612903.ctex"
+uid="uid://br4e8id378170"
+path="res://.godot/imported/Fish world tileset-Sheet.png-c6d54021eae72bb454c0b4f4d6173400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fish(swim).png"
-dest_files=["res://.godot/imported/fish(swim).png-a34d20e85165d93ad0857f2240612903.ctex"]
+source_file="res://assets/tileset/Fish world tileset-Sheet.png"
+dest_files=["res://.godot/imported/Fish world tileset-Sheet.png-c6d54021eae72bb454c0b4f4d6173400.ctex"]
 
 [params]
 
