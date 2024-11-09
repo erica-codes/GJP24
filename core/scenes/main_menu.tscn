@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkjcwl0ptjkj7"]
 
-[ext_resource type="Script" path="res://core/scenes/main_menu.gd" id="1_qo8k4"]
+[ext_resource type="Script" path="res://core/scripts/main_menu.gd" id="1_qo8k4"]
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_myo31"]
-[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/Super Kinds.ttf" id="3_xfcsy"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_xfcsy"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3

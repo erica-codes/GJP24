@@ -8,8 +8,7 @@ const MAX_JUMPS = 2
 var jump_count = 0  
 
 @onready var fish = $AnimatedSprite2D
-@onready var main = get_tree().get_root().get_node("main")
-
+@onready var projectile = load("res://core/scripts/bullet.tcsn")
 
 
 func _physics_process(delta: float) -> void:
@@ -33,5 +32,6 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("spit"):
 		$AnimationPlayer.play("spit")
+		
 		
 	move_and_slide()

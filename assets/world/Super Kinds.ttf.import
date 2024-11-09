@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dvsopba2tyw0a"
-path="res://.godot/imported/Super Kinds.ttf-fe174555813973a320354091bf790ee7.fontdata"
+path="res://.godot/imported/Super Kinds.ttf-5be2a838c85f89cbd7cc29172630f571.fontdata"
 
 [deps]
 
-source_file="res://assets/Super Kinds.ttf"
-dest_files=["res://.godot/imported/Super Kinds.ttf-fe174555813973a320354091bf790ee7.fontdata"]
+source_file="res://assets/world/Super Kinds.ttf"
+dest_files=["res://.godot/imported/Super Kinds.ttf-5be2a838c85f89cbd7cc29172630f571.fontdata"]
 
 [params]
 
