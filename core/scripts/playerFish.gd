@@ -8,6 +8,7 @@ const MAX_JUMPS = 2
 var jump_count = 0  
 
 @onready var fish = $AnimatedSprite2D
+@onready var main = get_tree().get_root().get_node("main")
 
 
 
