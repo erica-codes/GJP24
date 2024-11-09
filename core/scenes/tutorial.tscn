@@ -47,7 +47,7 @@ metadata/_edit_vertical_guides_ = [776.0, 778.0]
 [node name="World" parent="." instance=ExtResource("4_onaj4")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(577, 323)
+position = Vector2(599, 361)
 
 [node name="fish" type="CharacterBody2D" parent="."]
 position = Vector2(86, 519)
@@ -73,9 +73,11 @@ scale = Vector2(0.4375, 0.40625)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_top = 131.0
-offset_right = 1155.0
-offset_bottom = 251.0
+visible = false
+offset_left = -4.0
+offset_top = 300.0
+offset_right = 1151.0
+offset_bottom = 420.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Press the left and arrow key to move. Space to jump. 
