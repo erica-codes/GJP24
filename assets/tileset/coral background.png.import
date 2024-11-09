@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0m688xrnlbp"
-path="res://.godot/imported/[NEW] coral background.png-cee6a6a934c852a2d39e257102b51d8e.ctex"
+uid="uid://c2obrt0bxfrds"
+path="res://.godot/imported/coral background.png-ebb1f1373e65517d3211e1cb8b195df7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/[NEW] coral background.png"
-dest_files=["res://.godot/imported/[NEW] coral background.png-cee6a6a934c852a2d39e257102b51d8e.ctex"]
+source_file="res://assets/tileset/coral background.png"
+dest_files=["res://.godot/imported/coral background.png-ebb1f1373e65517d3211e1cb8b195df7.ctex"]
 
 [params]
 
