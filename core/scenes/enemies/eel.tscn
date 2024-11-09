@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds0l5a7bn3vy6"]
 
 [ext_resource type="Script" path="res://core/scripts/eel.gd" id="1_xatvk"]
-[ext_resource type="Texture2D" uid="uid://d3c1jyutnsekv" path="res://assets/eel sprite.png" id="2_mvwm4"]
+[ext_resource type="Texture2D" uid="uid://d3c1jyutnsekv" path="res://assets/png/eel sprite.png" id="2_mvwm4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jhq"]
 size = Vector2(805, 53.6875)

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beijj2s2efwa6"
-path.s3tc="res://.godot/imported/Stylized Sky Background (8).png-fe586f7196401db9b7ce93afa0926093.s3tc.ctex"
+uid="uid://wkc5cg4hjg7t"
+path.s3tc="res://.godot/imported/portrait1.png-90686ebff8d9fbd0cc565f5fe8cd4a35.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Stylized Sky Background (8).png"
-dest_files=["res://.godot/imported/Stylized Sky Background (8).png-fe586f7196401db9b7ce93afa0926093.s3tc.ctex"]
+source_file="res://assets/png/portrait1.png"
+dest_files=["res://.godot/imported/portrait1.png-90686ebff8d9fbd0cc565f5fe8cd4a35.s3tc.ctex"]
 
 [params]
 

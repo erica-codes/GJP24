@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://diio1mih7vwpy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqmm4"]
+
+[node name="crab" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jqmm4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

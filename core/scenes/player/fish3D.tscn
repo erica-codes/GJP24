@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdymd2t2g5omt"]
+[gd_scene load_steps=6 format=3 uid="uid://bdymd2t2g5omt"]
 
 [ext_resource type="Script" path="res://core/scripts/fish3D.gd" id="1_redwk"]
 [ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_gqabt"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6sq7v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v6lkg"]
 
@@ -15,10 +13,8 @@ albedo_texture = ExtResource("2_gqabt")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_eqcx2"]
 
-[node name="RigidBody3D" type="RigidBody3D"]
-mass = 0.106
-physics_material_override = SubResource("PhysicsMaterial_6sq7v")
-linear_damp = 1.0
+[node name="fish" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.834594, 2.80802, 0)
 script = ExtResource("1_redwk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -31,4 +27,8 @@ material_override = SubResource("StandardMaterial3D_j83te")
 mesh = SubResource("CapsuleMesh_eqcx2")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.448429, 1.17279)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888421, 0.17279)
+
+[node name="fishCamera" type="Camera3D" parent="."]
+transform = Transform3D(2.32837e-08, -0.624193, 0.78127, 1.86024e-08, 0.78127, 0.624193, -1, 0, 2.98023e-08, 2.55553, 2.41749, -0.0371268)
+current = true

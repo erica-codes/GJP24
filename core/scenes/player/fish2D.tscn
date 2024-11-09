@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://deuvahl4s6f00"]
+
+[ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_g2wbk"]
+[ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_87geq"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="3_25etk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhemk"]
+atlas = ExtResource("2_87geq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk3ki"]
+atlas = ExtResource("2_87geq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iim2b"]
+atlas = ExtResource("2_87geq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hop6"]
+atlas = ExtResource("2_87geq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg47l"]
+atlas = ExtResource("2_87geq")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8jqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhemk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk3ki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iim2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hop6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg47l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4h3u2"]
+radius = 49.2308
+height = 108.308
+
+[node name="fish" type="CharacterBody2D"]
+position = Vector2(86, 519)
+scale = Vector2(0.4375, 0.40625)
+script = ExtResource("1_g2wbk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_l8jqc")
+autoplay = "default"
+frame_progress = 0.16756
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_25etk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4h3u2")

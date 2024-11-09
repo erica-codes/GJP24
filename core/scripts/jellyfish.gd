@@ -13,27 +13,27 @@ func _ready():
 	move_to_end()  
 
 func move_to_end():
-	print("Moving to end position")
+	#print("Moving to end position")
 	var tween = create_tween()
 	tween.tween_property(self, "position", end_position, move_duration)
 	tween.finished.connect(despawn)  
 
 func despawn():
-	print("Despawning...")
+	#print("Despawning...")
 	sprite.visible = false  
 	await get_tree().create_timer(1.0).timeout  
 	respawn()  
 
 func respawn():
-	print("Respawning...")
+	#print("Respawning...")
 	position = respawn_position  
 	sprite.visible = true  
 	move_to_end()  
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
-	print("Entered screen")
+	#print("Entered screen")
 	sprite.visible = true  
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
-	print("Exited screen")
+	#print("Exited screen")
 	sprite.visible = false  
