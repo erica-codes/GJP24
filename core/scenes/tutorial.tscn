@@ -1,9 +1,66 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=11 format=4 uid="uid://ctb1xom2l2nqr"]
 
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_jrgjg"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/worlds/world.tscn" id="4_onaj4"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="4_tsocm"]
+[ext_resource type="PackedScene" uid="uid://cr4iapkrk2uxv" path="res://core/scenes/turtle.tscn" id="5_70wl6"]
 [ext_resource type="PackedScene" uid="uid://dyhqmkd8juv14" path="res://core/scenes/enemies/jellyfish.tscn" id="5_b4tlg"]
+[ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="6_4cre2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rallj"]
+texture = ExtResource("6_4cre2")
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_ngfd1"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_rallj")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_848hm"]
+radius = 32.1585
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
@@ -23,15 +80,42 @@ scale = Vector2(0.4375, 0.40625)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-visible = false
-offset_left = -4.0
-offset_top = 300.0
-offset_right = 1151.0
-offset_bottom = 420.0
+offset_left = -210.0
+offset_top = 365.0
+offset_right = 985.0
+offset_bottom = 426.0
+theme_override_fonts/normal_font = ExtResource("4_tsocm")
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "[center]Press the left and arrow key to move. Space to jump. 
-Be careful, you can only jump [wave][rainbow]thrice :d"
+text = "[center]Press A and D to move. 
+Space to jump. You can jump three times"
 
 [node name="jellyfish" parent="." instance=ExtResource("5_b4tlg")]
 position = Vector2(746, 805)
+
+[node name="Turtle" parent="." instance=ExtResource("5_70wl6")]
+position = Vector2(977, 283)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAABIAAAAAAAUAAAAAABEAAAAAAAUAAAAAABAAAAAAAAUAAAAAAA8AAAAAAAUAAAAAAA4AAAAAAAUAAAAAAA0AAAAAAAUAAAAAAAwAAAAAAAUAAAAAAAsAAAAAAAUAAAAAAAoAAAAAAAUAAAAAAAkAAAAAAAUAAAAAAAgAAAAAAAUAAAAAAAcAAAAAAAUAAAAAAAYAAAAAAAUAAAAAAAUAAAAAAAUAAAAAAAQAAAAAAAUAAAAAAAMAAAAAAAUAAAAAAAIAAAAAAAUAAAAAAAEAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAP//AAAAAAUAAAABAP//AAAAAAUAAAACAP//AAAAAAUAAAADAP//AAAAAAUAAAAEAP//AAAAAAUAAAAFAP//AAAAAAUAAAAGAP//AAAAAAUAAAAHAP//AAAAAAUAAAAIAP//AAAAAAUAAAAJAP//AAAAAAUAAAAKAP//AAAAAAUAAAALAP//AAAAAAUAAAAMAP//AAAAAAUAAAANAP//AAAAAAUAAAAOAP//AAAAAAUAAAAPAP//AAAAAAUAAAAQAP//AAAAAAUAAAARAP//AAAAAAUAAAASAP//AAAAAAUAAAATAP//AAAAAAUAAAAUAP//AAAAAAUAAAAVAP//AAAAAAUAAAAWAP//AAAAAAUAAAAXAP//AAAAAAUAAAAYAP//AAAAAAUAAAAZAP//AAAAAAUAAAAaAP//AAAAAAUAAAAbAP//AAAAAAUAAAAcAP//AAAAAAUAAAAdAP//AAAAAAUAAAAeAP//AAAAAAUAAAAfAP//AAAAAAUAAAAgAP//AAAAAAUAAAAhAP//AAAAAAUAAAAiAP//AAAAAAUAAAAjAP//AAAAAAUAAAAkAP//AAAAAAUAAAAlAP//AAAAAAUAAAAlAAAAAAAAAAUAAAAlAAEAAAAAAAUAAAAlAAIAAAAAAAUAAAAlAAMAAAAAAAUAAAAlAAQAAAAAAAUAAAAlAAUAAAAAAAUAAAAlAAYAAAAAAAUAAAAlAAcAAAAAAAUAAAAlAAgAAAAAAAUAAAAlAAkAAAAAAAUAAAAlAAoAAAAAAAUAAAAlAAsAAAAAAAUAAAAlAAwAAAAAAAUAAAAlAA0AAAAAAAUAAAAlAA4AAAAAAAUAAAAlAA8AAAAAAAUAAAAlABEAAAAAAAUAAAAlABIAAAAAAAUAAAAlABMAAAAAAAUAAAAlABQAAAAAAAUAAAAlABUAAAAAAAUAAAAlABYAAAAAAAUAAAAlABcAAAAAAAUAAAAlABAAAAAAAAMAAAA=")
+tile_set = SubResource("TileSet_ngfd1")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1162, 222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 0)
+scale = Vector2(1.12, 1)
+shape = SubResource("CircleShape2D_848hm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1059.0
+offset_top = 195.0
+offset_right = 1208.0
+offset_bottom = 270.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_tsocm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[wave] ->"

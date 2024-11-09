@@ -124,7 +124,7 @@ walk_speed = 10
 sprite_frames = SubResource("SpriteFrames_jqmm4")
 animation = &"Death"
 autoplay = "Walk"
-frame_progress = 0.63251
+frame_progress = 0.161263
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2)
