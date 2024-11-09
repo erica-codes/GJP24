@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d1asxv00gte5c"
-path="res://.godot/imported/flushFINAL.fbx-1ebf85b71a6288601b7d725706609150.scn"
+path="res://.godot/imported/flushFINAL.fbx-ffc85cf4fcadc2106d906e64cefe1db9.scn"
 
 [deps]
 
-source_file="res://assets/flushFINAL.fbx"
-dest_files=["res://.godot/imported/flushFINAL.fbx-1ebf85b71a6288601b7d725706609150.scn"]
+source_file="res://assets/3D/flushFINAL.fbx"
+dest_files=["res://.godot/imported/flushFINAL.fbx-ffc85cf4fcadc2106d906e64cefe1db9.scn"]
 
 [params]
 

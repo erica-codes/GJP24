@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkjcwl0ptjkj7"]
 
-[ext_resource type="Script" path="res://core/scripts/main_menu.gd" id="1_qo8k4"]
-[ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_myo31"]
-[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_xfcsy"]
+[ext_resource type="Script" path="res://core/scripts/main_menu.gd" id="1_nbl1s"]
+[ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_s5lla"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_apaql"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -11,13 +11,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qo8k4")
+script = ExtResource("1_nbl1s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_myo31")
+texture = ExtResource("2_s5lla")
 expand_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -36,7 +36,7 @@ grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_constants/shadow_offset_y = 2
-theme_override_fonts/normal_font = ExtResource("3_xfcsy")
+theme_override_fonts/normal_font = ExtResource("3_apaql")
 theme_override_font_sizes/normal_font_size = 52
 text = "FISH OUT OF WATER?!"
 metadata/_edit_use_anchors_ = true
@@ -58,17 +58,17 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xfcsy")
+theme_override_fonts/font = ExtResource("3_apaql")
 text = "START"
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xfcsy")
+theme_override_fonts/font = ExtResource("3_apaql")
 text = "CREDITS"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_xfcsy")
+theme_override_fonts/font = ExtResource("3_apaql")
 text = "EXIT"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -65,3 +65,5 @@ func _on_move_timer_timeout() -> void:
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	if area.owner is Player:
 		state = states.DEATH
+		$AnimatedSprite2D.play("Death")
+		queue_free()

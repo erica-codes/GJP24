@@ -16,7 +16,7 @@ func _on_start_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://core/scenes/credits.tscn")
+	get_tree().change_scene_to_file("res://core/scenes/UI/credits.tscn")
 	pass # Replace with function body.
 
 

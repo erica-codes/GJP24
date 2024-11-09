@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbl16w0u65d36"]
 
 [ext_resource type="Script" path="res://core/scripts/bullet.gd" id="1_lbn48"]
-[ext_resource type="Texture2D" uid="uid://o0trr6rmebhh" path="res://assets/png/pellet.png" id="2_k8g2h"]
+[ext_resource type="Texture2D" uid="uid://fx30j23thtyu" path="res://assets/png/pellet.png" id="2_k8g2h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0exut"]
 radius = 3.0
@@ -27,3 +27,9 @@ scale = Vector2(0.148437, 0.0390625)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(3.8147e-06, 3.8147e-06)
 shape = SubResource("CircleShape2D_2hmd6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

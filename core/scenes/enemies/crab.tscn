@@ -1,7 +1,32 @@
-[gd_scene load_steps=13 format=3 uid="uid://diio1mih7vwpy"]
+[gd_scene load_steps=20 format=3 uid="uid://diio1mih7vwpy"]
 
 [ext_resource type="Texture2D" uid="uid://cimn6cnta84gn" path="res://assets/spritesheet/crab sprite-Sheet.png" id="1_pvpyu"]
 [ext_resource type="Script" path="res://core/scripts/crab.gd" id="1_w2r6x"]
+[ext_resource type="Texture2D" uid="uid://twf1g3so6eq8" path="res://assets/spritesheet/crab death.png" id="2_x1hub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlvav"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvv0d"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txnht"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q26ev"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fftjx"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esnq0"]
+atlas = ExtResource("2_x1hub")
+region = Rect2(320, 0, 64, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ulhjs"]
 atlas = ExtResource("1_pvpyu")
@@ -33,6 +58,29 @@ region = Rect2(384, 0, 64, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jqmm4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlvav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvv0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txnht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q26ev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fftjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esnq0")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ulhjs")
@@ -74,9 +122,9 @@ walk_speed = 10
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jqmm4")
-animation = &"Walk"
+animation = &"Death"
 autoplay = "Walk"
-frame_progress = 0.299396
+frame_progress = 0.219723
 
 [node name="body" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 2)
@@ -92,5 +140,9 @@ collision_layer = 2
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_332u5")
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cjwclci67dskf"
-path="res://.godot/imported/ToiletFINAL.fbx-5b98e4fb17c78528bb3c7d2ec91e8eb5.scn"
+uid="uid://cadhaly10hqex"
+path="res://.godot/imported/mopmop.fbx-bd2484c083d57bc56b51c45650230ff0.scn"
 
 [deps]
 
-source_file="res://assets/ToiletFINAL.fbx"
-dest_files=["res://.godot/imported/ToiletFINAL.fbx-5b98e4fb17c78528bb3c7d2ec91e8eb5.scn"]
+source_file="res://assets/3D/mopmop.fbx"
+dest_files=["res://.godot/imported/mopmop.fbx-bd2484c083d57bc56b51c45650230ff0.scn"]
 
 [params]
 

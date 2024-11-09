@@ -30,5 +30,5 @@ mesh = SubResource("CapsuleMesh_eqcx2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888421, 0.17279)
 
 [node name="fishCamera" type="Camera3D" parent="."]
-transform = Transform3D(2.32837e-08, -0.624193, 0.78127, 1.86024e-08, 0.78127, 0.624193, -1, 0, 2.98023e-08, 2.55553, 2.41749, -0.0371268)
+transform = Transform3D(-0.999323, -0.00737615, 0.0360361, 1.48302e-09, 0.979688, 0.200531, -0.0367833, 0.200395, -0.979024, 0, 0.737307, -2.21739)
 current = true
