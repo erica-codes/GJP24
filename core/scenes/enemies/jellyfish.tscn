@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyhqmkd8juv14"]
+[gd_scene load_steps=5 format=3 uid="uid://dyhqmkd8juv14"]
 
 [ext_resource type="Script" path="res://core/scripts/jellyfish.gd" id="1_2w3ew"]
 [ext_resource type="Texture2D" uid="uid://wkc5cg4hjg7t" path="res://assets/png/portrait1.png" id="1_bp43t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eug8b"]
 radius = 33.0
-height = 172.0
+height = 104.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ww6vj"]
+size = Vector2(58, 54)
 
 [node name="jellyfish" type="AnimatableBody2D"]
 script = ExtResource("1_2w3ew")
@@ -16,12 +19,11 @@ scale = Vector2(0.291992, 0.655273)
 texture = ExtResource("1_bp43t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27, -63)
+position = Vector2(26, -99)
 shape = SubResource("CapsuleShape2D_eug8b")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(28.5, -64.5)
-scale = Vector2(3.85, 8.35)
+[node name="Area2D" type="Area2D" parent="."]
 
-[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(25, -20)
+shape = SubResource("RectangleShape2D_ww6vj")
