@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwfai6nk0sxm2"
-path="res://.godot/imported/[NEW] coral background.png-cee6a6a934c852a2d39e257102b51d8e.ctex"
+uid="uid://twf1g3so6eq8"
+path="res://.godot/imported/crab death.png-a34db253fad6ba5a567927c72c2f0a6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/[NEW] coral background.png"
-dest_files=["res://.godot/imported/[NEW] coral background.png-cee6a6a934c852a2d39e257102b51d8e.ctex"]
+source_file="res://assets/spritesheet/crab death.png"
+dest_files=["res://.godot/imported/crab death.png-a34db253fad6ba5a567927c72c2f0a6b.ctex"]
 
 [params]
 
