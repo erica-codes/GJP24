@@ -6,16 +6,16 @@
 radius = 0.471573
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qnko8"]
-size = Vector3(0.186523, 1.90485, 0.1)
+size = Vector3(0.186523, 1.90485, 0.743262)
 
 [node name="Node3D" type="StaticBody3D"]
 
 [node name="mopmop" parent="." instance=ExtResource("1_0q4pk")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 2.9907, -0.236004, 0, 0.236004, 2.9907, -0.470939, -3.07579, 0.49128)
+transform = Transform3D(3, 0, 0, 0, 2.9907, -0.236004, 0, 0.236004, 2.9907, -0.0524806, -2.6117, 0.49128)
 shape = SubResource("SphereShape3D_hqj8o")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.56534, 1.43027, -0.611022, 1.38393, 2.63696, 0.362199, 0.709761, 0.0278515, -2.9147, 0.505243, 0.501721, -0.0281288)
+transform = Transform3D(-2.56534, 1.43027, -0.611022, 1.38393, 2.63696, 0.362199, 0.709761, 0.0278515, -2.9147, 0.585469, 0.454165, 0.354568)
 shape = SubResource("BoxShape3D_qnko8")
