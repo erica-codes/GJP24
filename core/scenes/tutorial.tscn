@@ -1,35 +1,49 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=14 format=3 uid="uid://ctb1xom2l2nqr"]
 
 [ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_qsmya"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_xljle"]
-[ext_resource type="Texture2D" uid="uid://dpxw4lofenabe" path="res://assets/fish(swim).png" id="2_dx4kd"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
+[ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/[NEW] fish for ur fisht.png" id="3_tas5v"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/world.tscn" id="4_onaj4"]
 [ext_resource type="PackedScene" uid="uid://dyhqmkd8juv14" path="res://core/scenes/enemies/jellyfish.tscn" id="5_b4tlg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ipeqn"]
-atlas = ExtResource("2_dx4kd")
-region = Rect2(0, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhemk"]
+atlas = ExtResource("3_tas5v")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxifm"]
-atlas = ExtResource("2_dx4kd")
-region = Rect2(160, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk3ki"]
+atlas = ExtResource("3_tas5v")
+region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uxx4f"]
-atlas = ExtResource("2_dx4kd")
-region = Rect2(320, 0, 160, 160)
+[sub_resource type="AtlasTexture" id="AtlasTexture_iim2b"]
+atlas = ExtResource("3_tas5v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hop6"]
+atlas = ExtResource("3_tas5v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg47l"]
+atlas = ExtResource("3_tas5v")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l8jqc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ipeqn")
+"texture": SubResource("AtlasTexture_uhemk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yxifm")
+"texture": SubResource("AtlasTexture_rk3ki")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uxx4f")
+"texture": SubResource("AtlasTexture_iim2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hop6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg47l")
 }],
 "loop": true,
 "name": &"default",
@@ -37,8 +51,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4h3u2"]
-radius = 61.5385
-height = 132.923
+radius = 49.2308
+height = 108.308
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
@@ -55,9 +69,10 @@ scale = Vector2(0.4375, 0.40625)
 script = ExtResource("1_qsmya")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fish"]
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_l8jqc")
 autoplay = "default"
-frame_progress = 0.861712
+frame_progress = 0.608834
 
 [node name="Icon" type="Sprite2D" parent="fish"]
 visible = false

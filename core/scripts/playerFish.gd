@@ -5,6 +5,8 @@ const JUMP_VELOCITY = -290.0
 const MAX_JUMPS = 2
 var jump_count = 0  
 
+@onready var fish = $AnimatedSprite2D
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -20,6 +22,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction != 0:
 		velocity.x = direction * SPEED  
+		fish.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
