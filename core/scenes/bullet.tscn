@@ -1,3 +1,26 @@
-[gd_scene format=3 uid="uid://dbl16w0u65d36"]
+[gd_scene load_steps=4 format=3 uid="uid://dbl16w0u65d36"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://core/scripts/bullet.gd" id="1_lbn48"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0exut"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hmd6"]
+radius = 6.73684
+
+[node name="bullet" type="CharacterBody2D"]
+script = ExtResource("1_lbn48")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.75, -1.25)
+scale = Vector2(0.0898437, 0.0195313)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0exut")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1.19209e-07, -1.19209e-07)
+scale = Vector2(0.148437, 0.0390625)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2hmd6")
