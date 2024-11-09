@@ -12,6 +12,6 @@ func _on_body_entered(body: Node) -> void:
 
 func _change_scene() -> void:
 	var new_scene = preload("res://core/scenes/level3.tscn").instantiate()
+	get_tree().current_scene.queue_free()  # Free the current scene
 	get_tree().root.add_child(new_scene)
-	get_tree().current_scene = new_scene  
-	queue_free()  # Remove this Area2D object from the scene
+	get_tree().current_scene = new_scene

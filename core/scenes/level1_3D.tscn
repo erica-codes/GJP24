@@ -202,7 +202,7 @@ transform = Transform3D(-0.0423814, 0, -0.999102, 0, 1, 0, 0.999102, 0, -0.04238
 transform = Transform3D(0.0295965, 0, -0.999562, 0, 1, 0, 0.999562, 0, 0.0295965, 52.7513, -3.13417, -2.09067)
 
 [node name="mopbucketFInal" parent="." instance=ExtResource("11_0gj6h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4961, -4.95424, 3.1743)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.7092, -4.95424, 3.1743)
 
 [node name="ToiletFINAL" parent="." instance=ExtResource("12_35efn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3866, -4.08651, -23.7001)
