@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://ctsxy8sa5bwjc"]
 
-[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="1_djggf"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="1_djggf"]
 [ext_resource type="Texture2D" uid="uid://br4e8id378170" path="res://assets/tileset/Fish world tileset-Sheet.png" id="2_sirqd"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="3_ch5ya"]
 

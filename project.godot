@@ -13,7 +13,7 @@ config_version=5
 config/name="GJP24"
 run/main_scene="res://core/scenes/tutorial.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+config/icon="res://assets/world/icon.svg"
 
 [display]
 

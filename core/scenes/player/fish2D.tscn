@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_g2wbk"]
 [ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_87geq"]
-[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="3_25etk"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="3_25etk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uhemk"]
 atlas = ExtResource("2_87geq")

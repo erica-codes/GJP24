@@ -1,11 +1,104 @@
-[gd_scene load_steps=2 format=3 uid="uid://diio1mih7vwpy"]
+[gd_scene load_steps=14 format=3 uid="uid://diio1mih7vwpy"]
+
+[ext_resource type="Texture2D" uid="uid://cimn6cnta84gn" path="res://assets/spritesheet/crab sprite-Sheet.png" id="1_pvpyu"]
+[ext_resource type="Script" path="res://core/scripts/crab.gd" id="1_w2r6x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulhjs"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88n1x"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt370"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jime3"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31sll"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aasc1"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kmmr"]
+atlas = ExtResource("1_pvpyu")
+region = Rect2(384, 0, 64, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jqmm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulhjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88n1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt370")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jime3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31sll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aasc1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kmmr")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mauh5"]
+size = Vector2(30, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qib2j"]
+radius = 6.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_332u5"]
+size = Vector2(38, 22)
 
 [node name="crab" type="CharacterBody2D"]
 collision_layer = 2
+script = ExtResource("1_w2r6x")
+gravity = null
+walk_speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jqmm4")
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.567518
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_mauh5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(21, -8)
+shape = SubResource("CircleShape2D_qib2j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-23, -8)
+shape = SubResource("CircleShape2D_qib2j")
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_332u5")

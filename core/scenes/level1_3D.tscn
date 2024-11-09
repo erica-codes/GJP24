@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bdymd2t2g5omt" path="res://core/scenes/player/fish3D.tscn" id="2_pwssy"]
 [ext_resource type="Texture2D" uid="uid://beijj2s2efwa6" path="res://assets/png/Stylized Sky Background (8).png" id="2_q8wwo"]
 [ext_resource type="Texture2D" uid="uid://wkc5cg4hjg7t" path="res://assets/png/portrait1.png" id="3_o6mpn"]
-[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/icon.svg" id="4_o5kno"]
+[ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="4_o5kno"]
 [ext_resource type="PackedScene" uid="uid://ctb1xom2l2nqr" path="res://core/scenes/tutorial.tscn" id="5_32fnv"]
 [ext_resource type="PackedScene" uid="uid://cuh1cwcwsh4ln" path="res://core/scenes/objects/mop.tscn" id="7_xl2nf"]
 [ext_resource type="PackedScene" uid="uid://c5ve5lakf028g" path="res://core/scenes/objects/key.tscn" id="8_7chl0"]
