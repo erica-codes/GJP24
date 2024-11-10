@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://mfm5nptluc30"]
+[gd_scene load_steps=3 format=3 uid="uid://mfm5nptluc30"]
+
+[ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_ua1ln"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="2_aso5v"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CUiCoralBackground-sheet" type="Sprite2D" parent="."]
+position = Vector2(577, 329)
+scale = Vector2(0.449219, 0.514062)
+texture = ExtResource("1_ua1ln")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 160.0
+offset_top = 231.0
+offset_right = 1010.0
+offset_bottom = 513.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_aso5v")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "
+[center] [wave]Thank you for playing this short demo!"
