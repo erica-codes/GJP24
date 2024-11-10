@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=4 uid="uid://dncf4h60a0u1p"]
+[gd_scene load_steps=17 format=4 uid="uid://dncf4h60a0u1p"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_gvjjw"]
 [ext_resource type="Script" path="res://core/scripts/levels/level_3.gd" id="1_ynm57"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_a71iy"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="3_tnq34"]
+[ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="4_len13"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="4_re6h0"]
 [ext_resource type="Script" path="res://core/scripts/ui/text_effect.gd" id="5_dq32v"]
 [ext_resource type="Script" path="res://core/scenes/animation_player.gd" id="7_x84xx"]
@@ -30,9 +31,41 @@ texture = ExtResource("3_tnq34")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rdm4"]
+texture = ExtResource("4_len13")
+0:1/0 = 0
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.375, -5.875, -8, 6, -8, 8, -5.625, 8, 8, -8, 8)
+5:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.375, -5.75, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.375, -8, -8, 6.25, -8, 8, -5.625, 8, 8, -8, 8)
+0:4/0 = 0
+1:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+0:6/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_4fbhu"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lsbof")
+sources/1 = SubResource("TileSetAtlasSource_8rdm4")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vym8u"]
 
@@ -90,7 +123,7 @@ expand_mode = 1
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(67, 572)
 scale = Vector2(3, 2.781)
-tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAARAAEAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD+//7/AAAAAAAAAAD+//3/AAAAAAAAAAD+//z/AAAAAAAAAAD+//r/AAAAAAAAAAD+//n/AAAAAAAAAAD+//j/AAAAAAAAAAD+//f/AAAAAAAAAAD+//b/AAAAAAAAAAD+//X/AAAAAAAAAAD+//T/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAQAEAAQAAAAFAAEAAQAGAAQAAAAGAAEAAAAAAAAAAAAHAAEAAQAEAAQAAAAIAAEAAQAFAAQAAAAJAAEAAQAGAAQAAAAKAAEAAAAAAAAAAAALAAEAAQAEAAQAAAAMAAEAAQAGAAQAAAANAAEAAAAAAAAAAAAOAAEAAQAEAAQAAAAPAAEAAQAFAAQAAAAQAAEAAQAGAAQAAAARAAEAAAAAAAAAAAASAAEAAQAEAAQAAAATAAEAAQAGAAQAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAWAAEAAAAAAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD+//7/AAAAAAAAAAD+//3/AAAAAAAAAAD+//z/AAAAAAAAAAD+//r/AAAAAAAAAAD+//n/AAAAAAAAAAD+//j/AAAAAAAAAAD+//f/AAAAAAAAAAD+//b/AAAAAAAAAAD+//X/AAAAAAAAAAD+//T/AAAAAAAAAAAEAAAAAQADAAMAAAAFAAAAAQAHAAMAAAAJAAAAAQAHAAMAAAAIAAAAAQAFAAMAAAALAAAAAQADAAMAAAAMAAAAAQAHAAMAAAAHAAAAAQADAAMAAAAOAAAAAQADAAMAAAAQAAAAAQAGAAQAAAAPAAAAAQAFAAQAAAASAP//AQAEAAQAAAATAP//AQAGAAQAAAATAAAAAQAGAAQAAAASAAAAAQAEAAQAAAASAP7/AQADAAMAAAATAP7/AQAGAAQAAAAQAP//AQAHAAMAAAAPAP//AQADAAMAAAATAP3/AQAEAAEAAAA=")
 tile_set = SubResource("TileSet_4fbhu")
 
 [node name="fish" parent="." instance=ExtResource("2_a71iy")]
