@@ -83,22 +83,10 @@ script = ExtResource("1_xpe6m")
 
 [node name="main3dcam" parent="." instance=ExtResource("9_vyufc")]
 transform = Transform3D(0.998338, -0.0575697, -0.00271491, 0, -0.0471064, 0.99889, -0.0576337, -0.99723, -0.0470281, 17.3387, 30.067, -8.47616)
-current = false
 
 [node name="fish" parent="." instance=ExtResource("2_pwssy")]
-transform = Transform3D(-0.129004, 0, -0.991645, 0, 1, 0, 0.991645, 0, -0.129004, 2.42905, -0.579789, -2.30055)
+transform = Transform3D(-0.129004, 0, -0.991645, 0, 1, 0, 0.991645, 0, -0.129004, -0.811378, -0.579789, -2.30055)
 floor_stop_on_slope = false
-
-[node name="CamOrigin" type="Node3D" parent="fish"]
-transform = Transform3D(1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, 0, 0.414803, 0)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="fish/CamOrigin"]
-spring_length = 2.0
-margin = 0.5
-
-[node name="Camera3D" type="Camera3D" parent="fish/CamOrigin/SpringArm3D"]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.307199, 0, 2.36142)
-current = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ublo3")
