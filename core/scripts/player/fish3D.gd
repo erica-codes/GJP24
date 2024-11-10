@@ -23,8 +23,9 @@ func _input(event):
 		pivot.rotation.x = clamp(pivot.rotation.x, deg_to_rad(-90), deg_to_rad(45))
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit
+	
+	#if Input.is_action_just_pressed("quit"):
+		#get_tree().quit
 	
 	if not is_on_floor():
 		velocity.y += get_gravity().y * delta

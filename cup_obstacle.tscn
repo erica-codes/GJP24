@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0mn3qvws30fl"]
+
+[ext_resource type="PackedScene" uid="uid://8gsyvhpxisap" path="res://assets/cupFINAL.fbx" id="1_h4uef"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7l6yq"]
+
+[node name="Node3D" type="StaticBody3D"]
+
+[node name="cupFINAL" parent="." instance=ExtResource("1_h4uef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0191391, 0.0486138, 0.0131087)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_7l6yq")
