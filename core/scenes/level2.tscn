@@ -112,7 +112,16 @@ scale = Vector2(3.01683, 3.35962)
 script = ExtResource("8_eehgx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+<<<<<<< Updated upstream
 shape = SubResource("CircleShape2D_xcty0")
+||||||| Stash base
+position = Vector2(2.65173, -37.862)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_lce0e")
+=======
+position = Vector2(2.65173, -37.862)
+shape = SubResource("RectangleShape2D_lce0e")
+>>>>>>> Stashed changes
 
 [connection signal="body_entered" from="Area2D" to="fish" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

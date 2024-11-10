@@ -1,12 +1,17 @@
 extends Area2D
-@onready var camera_3d: Camera3D = $main3dcam
 
 func change_level():
+	#transition
 	var level1_scene = preload("res://core/scenes/level1_3D.tscn")
-	get_tree().change_scene_to_file("res://core/scenes/level1_3D.tscn")
-	#print("Transitioned to new scene:", get_tree().current_scene.name)
+	get_tree().change_scene_to_file("res://core/scenes/level1_3D.tscn")	
 	
-
+	#clear up memory
+	await get_tree().idle_frame()
+	
+	var current_scene = get_tree().current_scene
+	if current_scene:
+		current_scene.queue_free()
+		print("Previous scene freed.")
 
 func _on_body_entered(body: Node) -> void:
 	print("Body detected:", body.name, "Type:", body.get_class())
