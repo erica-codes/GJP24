@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Bullet
+
 @export var speed = 500.0
 @onready var sprite = $Sprite2D  # Adjust this if you're using a Sprite2D or AnimatedSprite2D node
 @onready var collision_area = $Area2D
