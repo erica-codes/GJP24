@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dncf4h60a0u1p"]
+[gd_scene load_steps=16 format=4 uid="uid://dncf4h60a0u1p"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_gvjjw"]
 [ext_resource type="Script" path="res://core/scripts/levels/level_3.gd" id="1_ynm57"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="3_tnq34"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="4_re6h0"]
 [ext_resource type="Script" path="res://core/scripts/ui/text_effect.gd" id="5_dq32v"]
+[ext_resource type="Script" path="res://core/scenes/3-4.gd" id="5_hero8"]
 [ext_resource type="Script" path="res://core/scenes/animation_player.gd" id="7_x84xx"]
 [ext_resource type="AudioStream" uid="uid://bw82g8uefpyx" path="res://assets/sfx/typing-sound-02-229861.mp3" id="8_jxopc"]
 
@@ -99,6 +100,7 @@ position = Vector2(67, 572)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1140, 354)
 scale = Vector2(9.52764, 30.7734)
+script = ExtResource("5_hero8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_vym8u")
@@ -132,3 +134,5 @@ script = ExtResource("7_x84xx")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_jxopc")
 volume_db = -25.338
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

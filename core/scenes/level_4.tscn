@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ki0oeebqcq5u"]
+[gd_scene load_steps=6 format=3 uid="uid://ki0oeebqcq5u"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_wr6sg"]
+[ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_rtpph"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_2yytj"]
+[ext_resource type="Script" path="res://core/scenes/level_4.gd" id="4_r2k6y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07ut5"]
+radius = 28.6531
 
 [node name="level4" type="Node2D"]
 
@@ -9,3 +15,31 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_wr6sg")
 expand_mode = 1
+
+[node name="fish" parent="." instance=ExtResource("2_rtpph")]
+position = Vector2(65, 511)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 467.0
+offset_top = 232.0
+offset_right = 1264.0
+offset_bottom = 366.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.806759, 4.06224e-05, 0.60381, 1)
+theme_override_constants/outline_size = 19
+theme_override_constants/shadow_offset_y = 11
+theme_override_fonts/normal_font = ExtResource("3_2yytj")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center] 
+Fish out of water!"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_r2k6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1130, 494)
+scale = Vector2(1, 3.84)
+shape = SubResource("CircleShape2D_07ut5")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

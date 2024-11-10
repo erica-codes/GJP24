@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bhvutsnu1qdr" path="res://assets/3D/mopFINAL.fbx" id="2_hp8cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qnko8"]
-size = Vector3(0.186523, 2.61217, 0.332544)
+size = Vector3(0.186523, 2.29827, 0.332544)
 
 [node name="Node3D" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020777, -0.099215, -0.00383854)
@@ -12,5 +12,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020777, -0.099215, -0.00383
 transform = Transform3D(0.988628, 0.150381, 0, -0.150381, 0.988628, 0, 0, 0, 1, 0.133022, 0.099215, 0.0186716)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.28779, 1.79007, -0.749425, 1.70994, 2.4073, 0.530093, 0.917666, -0.0229104, -2.85611, -0.0237769, -0.385404, -0.0439265)
+transform = Transform3D(-2.28779, 1.79007, -0.749425, 1.70994, 2.4073, 0.530093, 0.917666, -0.0229104, -2.85611, 0.920905, -0.00758141, -0.0475223)
 shape = SubResource("BoxShape3D_qnko8")
