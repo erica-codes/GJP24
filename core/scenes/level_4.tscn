@@ -1,12 +1,64 @@
-[gd_scene load_steps=6 format=3 uid="uid://ki0oeebqcq5u"]
+[gd_scene load_steps=9 format=4 uid="uid://ki0oeebqcq5u"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_wr6sg"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_rtpph"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_2yytj"]
 [ext_resource type="Script" path="res://core/scenes/level_4.gd" id="4_r2k6y"]
+[ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="5_hj83n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_07ut5"]
 radius = 28.6531
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_clhpa"]
+texture = ExtResource("5_hj83n")
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_dqjvp"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_clhpa")
 
 [node name="level4" type="Node2D"]
 
@@ -41,5 +93,10 @@ script = ExtResource("4_r2k6y")
 position = Vector2(1130, 494)
 scale = Vector2(1, 3.84)
 shape = SubResource("CircleShape2D_07ut5")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2.5, 2.5)
+tile_map_data = PackedByteArray("AAAAAA4AAAADAAMAAAABAA4AAAAEAAMAAAACAA4AAAAEAAMAAAADAA4AAAAFAAMAAAAEAA4AAAAFAAMAAAAFAA4AAAAFAAMAAAAGAA4AAAAFAAMAAAAHAA4AAAAFAAMAAAAIAA4AAAAGAAMAAAAJAA4AAAAGAAMAAAAKAA4AAAAGAAMAAAALAA4AAAAHAAMAAAAMAA4AAAAHAAMAAAANAA4AAAAHAAMAAAAOAA4AAAAHAAMAAAAAAA8AAAAGAAQAAAABAA8AAAAGAAQAAAACAA8AAAAGAAQAAAADAA8AAAAGAAQAAAAEAA8AAAAGAAQAAAAFAA8AAAAGAAQAAAAGAA8AAAAGAAQAAAAHAA8AAAAGAAQAAAAIAA8AAAAGAAQAAAAJAA8AAAAGAAQAAAAKAA8AAAAGAAQAAAALAA8AAAAGAAQAAAAMAA8AAAAGAAQAAAANAA8AAAAGAAQAAAAOAA8AAAAGAAQAAAAPAA0AAAAFAAQAAAAPAA4AAAAFAAQAAAAPAA8AAAAFAAQAAAAQAA0AAAAFAAQAAAAQAA4AAAAFAAQAAAAQAA8AAAAFAAQAAAARAA0AAAAFAAQAAAARAA4AAAAFAAQAAAARAA8AAAAFAAQAAAASAA0AAAAFAAQAAAASAA4AAAAFAAQAAAASAA8AAAAFAAQAAAATAA0AAAAFAAQAAAATAA4AAAAFAAQAAAATAA8AAAAFAAQAAAAUAA0AAAAFAAQAAAAUAA4AAAAFAAQAAAAUAA8AAAAFAAQAAAAPAAwAAAAEAAMAAAAQAAwAAAAFAAMAAAARAAwAAAAGAAMAAAASAAwAAAAEAAMAAAATAAwAAAAFAAMAAAAUAAwAAAAGAAMAAAAVAA0AAAAEAAMAAAAWAA0AAAAFAAMAAAAXAA0AAAAGAAMAAAAVAA4AAAAEAAQAAAAWAA4AAAAFAAQAAAAXAA4AAAAFAAQAAAAVAA8AAAAEAAUAAAAWAA8AAAAEAAUAAAAXAA8AAAAFAAUAAAAYAA0AAAAEAAMAAAAZAA0AAAAFAAMAAAAaAA0AAAAGAAMAAAAYAA4AAAAGAAQAAAAZAA4AAAAEAAQAAAAaAA4AAAAFAAQAAAAYAA8AAAAGAAUAAAAZAA8AAAAEAAUAAAAaAA8AAAAFAAUAAAAbAA0AAAAEAAMAAAAcAA0AAAAFAAMAAAAbAA4AAAAGAAQAAAAcAA4AAAAFAAQAAAAbAA8AAAAGAAUAAAAcAA8AAAAFAAUAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAD//wIAAAAAAAEAAAD//wMAAAAAAAEAAAD//wQAAAAAAAEAAAD//wUAAAAAAAEAAAD//wYAAAAAAAEAAAD//wcAAAAAAAEAAAD//wgAAAAAAAEAAAD//wkAAAAAAAEAAAD//woAAAAAAAEAAAD//wsAAAAAAAEAAAD//wwAAAAAAAEAAAD//w0AAAAAAAEAAAD//w4AAAAAAAEAAAD//w8AAAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAAFAP//AAAAAAEAAAAGAP//AAAAAAEAAAAHAP//AAAAAAEAAAAIAP//AAAAAAEAAAAJAP//AAAAAAEAAAAKAP//AAAAAAEAAAALAP//AAAAAAEAAAAMAP//AAAAAAEAAAANAP//AAAAAAEAAAAOAP//AAAAAAEAAAAPAP//AAAAAAEAAAAQAP//AAAAAAEAAAARAP//AAAAAAEAAAASAP//AAAAAAEAAAATAP//AAAAAAEAAAAUAP//AAAAAAEAAAAVAP//AAAAAAEAAAAWAP//AAAAAAEAAAAXAP//AAAAAAEAAAAYAP//AAAAAAEAAAAZAP//AAAAAAEAAAAaAP//AAAAAAEAAAAbAP//AAAAAAEAAAAcAP//AAAAAAEAAAAdAP//AAAAAAEAAAAdAAAAAAAAAAEAAAAdAAEAAAAAAAEAAAAdAAIAAAAAAAEAAAAdAAMAAAAAAAEAAAAdAAQAAAAAAAEAAAAdAAUAAAAAAAEAAAAdAAYAAAAAAAEAAAAdAAcAAAAAAAEAAAAdAAgAAAAAAAEAAAAdAAkAAAAAAAEAAAAdAAoAAAAAAAEAAAAdAAsAAAAAAAEAAAAdAAwAAAAAAAEAAAAdAA0AAAAAAAEAAAAdAA4AAAAAAAEAAAAdAA8AAAAAAAEAAAD//xAAAAAAAAEAAAAAABAAAAAAAAEAAAABABAAAAAAAAEAAAACABAAAAAAAAEAAAADABAAAAAAAAEAAAAEABAAAAAAAAEAAAAFABAAAAAAAAEAAAAGABAAAAAAAAEAAAAHABAAAAAAAAEAAAAIABAAAAAAAAEAAAAJABAAAAAAAAEAAAAKABAAAAAAAAEAAAALABAAAAAAAAEAAAAMABAAAAAAAAEAAAANABAAAAAAAAEAAAAOABAAAAAAAAEAAAAPABAAAAAAAAEAAAAQABAAAAAAAAEAAAARABAAAAAAAAEAAAASABAAAAAAAAEAAAATABAAAAAAAAEAAAAUABAAAAAAAAEAAAAVABAAAAAAAAEAAAAWABAAAAAAAAEAAAAXABAAAAAAAAEAAAAYABAAAAAAAAEAAAAZABAAAAAAAAEAAAAaABAAAAAAAAEAAAAbABAAAAAAAAEAAAAcABAAAAAAAAEAAAAdABAAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_dqjvp")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

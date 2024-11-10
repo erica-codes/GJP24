@@ -83,13 +83,13 @@ transform = Transform3D(0.0090233, 2.68582e-05, -0.999959, 0.0029659, 0.999996, 
 transform = Transform3D(-0.999971, 0.00296628, -0.00696374, 0.00296598, 0.999996, 5.43037e-05, 0.00696388, 3.3648e-05, -0.999976, -24.4809, 2.46381, 10.7502)
 
 [node name="key" parent="." instance=ExtResource("8_7chl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6465, -4.44927, 0.910215)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0148, -0.2847, -20.2338)
 
 [node name="BulleteinBoardFINAL" parent="." instance=ExtResource("9_iv1i5")]
-transform = Transform3D(0.0295965, 0, -0.999562, 0, 1, 0, 0.999562, 0, 0.0295965, 21.7278, -3.13417, -2.09067)
+transform = Transform3D(0.0295965, 0, -0.999562, 0, 1, 0, 0.999562, 0, 0.0295965, 26.1047, -3.13417, -2.09067)
 
 [node name="ToiletFINAL" parent="." instance=ExtResource("12_35efn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3866, -4.08651, -17.5129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.444, -1.23966, -21.1685)
 
 [node name="flushFINAL" parent="ToiletFINAL" instance=ExtResource("6_ho6o7")]
 transform = Transform3D(1, 2.98023e-08, -5.94184e-07, 2.98023e-08, 1, -6.1281e-07, 1.86265e-09, -1.67638e-08, 1, 0.80751, 1.69919, -0.545868)
@@ -98,10 +98,10 @@ transform = Transform3D(1, 2.98023e-08, -5.94184e-07, 2.98023e-08, 1, -6.1281e-0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7815, -5.24177, -10.9611)
 
 [node name="bucket3" parent="." instance=ExtResource("11_17yu6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.029, -5.39128, -15.4069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5711, -5.39128, -15.4069)
 
 [node name="mop" parent="." instance=ExtResource("12_d4fpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5519, -2.62092, -6.77145)
+transform = Transform3D(-0.135456, 0, 0.990783, 0, 1, 0, -0.990783, 0, -0.135456, 24.7809, -2.62092, -16.1892)
 
 [node name="tank" parent="." instance=ExtResource("5_robmj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6191, -4.10195, -26.6703)
@@ -111,3 +111,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5615, -3.99679, -26.6763)
 
 [node name="tank3" parent="." instance=ExtResource("5_robmj")]
 transform = Transform3D(0.0242053, 0, -0.999707, 0, 1, 0, 0.999707, 0, 0.0242053, -0.966523, -4.04132, -16.1426)
+
+[node name="StaticBody3D" parent="." instance=ExtResource("11_17yu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.7248, -5.45876, -10.8994)
