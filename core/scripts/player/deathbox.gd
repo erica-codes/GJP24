@@ -8,3 +8,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_timer_2d_timeout() -> void:
 	get_tree().reload_current_scene()
+	
