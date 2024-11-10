@@ -63,7 +63,11 @@ func _on_move_timer_timeout() -> void:
 	input_direction_x = get_random_direction()
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
-	if area.owner is Player:
+	if area.get_class() == "Bullet":  # Replace with area.get_class() == "Bullet" if necessary
+		print("Bullet detected! Entering DEATH state.")  # Debugging line
 		state = states.DEATH
+		$body.disabled = true
+		$Hurtbox.disabled = true
 		$AnimatedSprite2D.play("Death")
+		await $AnimatedSprite2D.animation_finished
 		queue_free()
