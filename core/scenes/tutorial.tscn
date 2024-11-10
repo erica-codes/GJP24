@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cr4iapkrk2uxv" path="res://core/scenes/turtle.tscn" id="5_70wl6"]
 [ext_resource type="PackedScene" uid="uid://dyhqmkd8juv14" path="res://core/scenes/enemies/jellyfish.tscn" id="5_b4tlg"]
 [ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="6_4cre2"]
+[ext_resource type="PackedScene" uid="uid://coe0bhxg3y1qg" path="res://core/scenes/move_to_next_level.tscn" id="8_f07ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rallj"]
 texture = ExtResource("6_4cre2")
@@ -59,9 +60,6 @@ texture = ExtResource("6_4cre2")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rallj")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_848hm"]
-radius = 32.1585
-
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
 metadata/_edit_vertical_guides_ = [776.0, 778.0]
@@ -73,13 +71,13 @@ position = Vector2(599, 361)
 
 [node name="fish" parent="." instance=ExtResource("2_jrgjg")]
 
-[node name="Node2D" parent="." instance=ExtResource("3_t7nse")]
+[node name="eel" parent="." instance=ExtResource("3_t7nse")]
 position = Vector2(1118, 528)
 scale = Vector2(0.4375, 0.40625)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="text" type="CanvasLayer" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="text"]
 offset_left = -210.0
 offset_top = 365.0
 offset_right = 985.0
@@ -89,6 +87,17 @@ theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "[center]Press A and D to move. 
 Space to jump. You can jump three times"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="text"]
+offset_left = 1059.0
+offset_top = 195.0
+offset_right = 1208.0
+offset_bottom = 270.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_tsocm")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[wave] ->"
 
 [node name="jellyfish" parent="." instance=ExtResource("5_b4tlg")]
 position = Vector2(746, 805)
@@ -101,21 +110,6 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAAABIAAAAAAAUAAAAAABEAAAAAAAUAAAAAABAAAAAAAAUAAAAAAA8AAAAAAAUAAAAAAA4AAAAAAAUAAAAAAA0AAAAAAAUAAAAAAAwAAAAAAAUAAAAAAAsAAAAAAAUAAAAAAAoAAAAAAAUAAAAAAAkAAAAAAAUAAAAAAAgAAAAAAAUAAAAAAAcAAAAAAAUAAAAAAAYAAAAAAAUAAAAAAAUAAAAAAAUAAAAAAAQAAAAAAAUAAAAAAAMAAAAAAAUAAAAAAAIAAAAAAAUAAAAAAAEAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAP//AAAAAAUAAAABAP//AAAAAAUAAAACAP//AAAAAAUAAAADAP//AAAAAAUAAAAEAP//AAAAAAUAAAAFAP//AAAAAAUAAAAGAP//AAAAAAUAAAAHAP//AAAAAAUAAAAIAP//AAAAAAUAAAAJAP//AAAAAAUAAAAKAP//AAAAAAUAAAALAP//AAAAAAUAAAAMAP//AAAAAAUAAAANAP//AAAAAAUAAAAOAP//AAAAAAUAAAAPAP//AAAAAAUAAAAQAP//AAAAAAUAAAARAP//AAAAAAUAAAASAP//AAAAAAUAAAATAP//AAAAAAUAAAAUAP//AAAAAAUAAAAVAP//AAAAAAUAAAAWAP//AAAAAAUAAAAXAP//AAAAAAUAAAAYAP//AAAAAAUAAAAZAP//AAAAAAUAAAAaAP//AAAAAAUAAAAbAP//AAAAAAUAAAAcAP//AAAAAAUAAAAdAP//AAAAAAUAAAAeAP//AAAAAAUAAAAfAP//AAAAAAUAAAAgAP//AAAAAAUAAAAhAP//AAAAAAUAAAAiAP//AAAAAAUAAAAjAP//AAAAAAUAAAAkAP//AAAAAAUAAAAlAP//AAAAAAUAAAAlAAAAAAAAAAUAAAAlAAEAAAAAAAUAAAAlAAIAAAAAAAUAAAAlAAMAAAAAAAUAAAAlAAQAAAAAAAUAAAAlAAUAAAAAAAUAAAAlAAYAAAAAAAUAAAAlAAcAAAAAAAUAAAAlAAgAAAAAAAUAAAAlAAkAAAAAAAUAAAAlAAoAAAAAAAUAAAAlAAsAAAAAAAUAAAAlAAwAAAAAAAUAAAAlAA0AAAAAAAUAAAAlAA4AAAAAAAUAAAAlAA8AAAAAAAUAAAAlABEAAAAAAAUAAAAlABIAAAAAAAUAAAAlABMAAAAAAAUAAAAlABQAAAAAAAUAAAAlABUAAAAAAAUAAAAlABYAAAAAAAUAAAAlABcAAAAAAAUAAAAlABAAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_ngfd1")
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(1162, 222)
+[node name="Area2D" parent="." instance=ExtResource("8_f07ed")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2, 0)
-scale = Vector2(1.12, 1)
-shape = SubResource("CircleShape2D_848hm")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 1059.0
-offset_top = 195.0
-offset_right = 1208.0
-offset_bottom = 270.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_tsocm")
-theme_override_font_sizes/normal_font_size = 50
-bbcode_enabled = true
-text = "[wave] ->"
+[connection signal="body_entered" from="Area2D" to="fish" method="_on_area_2d_body_entered"]

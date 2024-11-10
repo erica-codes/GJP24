@@ -28,7 +28,3 @@ mesh = SubResource("CapsuleMesh_eqcx2")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.888421, 0.17279)
-
-[node name="fishCamera" type="Camera3D" parent="."]
-transform = Transform3D(-0.999323, -0.00737615, 0.0360361, 1.48302e-09, 0.979688, 0.200531, -0.0367833, 0.200395, -0.979024, 0, 0.737307, -2.21739)
-current = true

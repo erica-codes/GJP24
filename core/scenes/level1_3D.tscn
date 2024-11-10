@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://beijj2s2efwa6" path="res://assets/png/Stylized Sky Background (8).png" id="2_q8wwo"]
 [ext_resource type="Texture2D" uid="uid://wkc5cg4hjg7t" path="res://assets/png/portrait1.png" id="3_o6mpn"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="4_o5kno"]
-[ext_resource type="PackedScene" uid="uid://ctb1xom2l2nqr" path="res://core/scenes/tutorial.tscn" id="5_32fnv"]
 [ext_resource type="PackedScene" uid="uid://d1asxv00gte5c" path="res://assets/3D/flushFINAL.fbx" id="6_ho6o7"]
 [ext_resource type="PackedScene" uid="uid://cuh1cwcwsh4ln" path="res://core/scenes/objects/mop.tscn" id="7_xl2nf"]
 [ext_resource type="PackedScene" uid="uid://c5ve5lakf028g" path="res://core/scenes/objects/key.tscn" id="8_7chl0"]
 [ext_resource type="PackedScene" uid="uid://blhvkkreqaiwb" path="res://assets/3D/BulleteinBoardFINAL.fbx" id="9_iv1i5"]
+[ext_resource type="PackedScene" uid="uid://dp8vpwiee8ekp" path="res://core/scenes/camera_3d.tscn" id="9_vyufc"]
 [ext_resource type="PackedScene" uid="uid://cjwclci67dskf" path="res://assets/3D/ToiletFINAL.fbx" id="12_35efn"]
 [ext_resource type="PackedScene" uid="uid://txc1xy4y43bg" path="res://assets/mopFINALFRFR.fbx" id="12_cavnl"]
 [ext_resource type="PackedScene" uid="uid://bhvutsnu1qdr" path="res://assets/3D/mopFINAL.fbx" id="13_vnxfa"]
@@ -80,6 +80,9 @@ size = Vector3(6, 45, 9.53)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_xpe6m")
+
+[node name="main3dcam" parent="." instance=ExtResource("9_vyufc")]
+transform = Transform3D(0.998338, -0.0575697, -0.00271491, 0, -0.0471064, 0.99889, -0.0576337, -0.99723, -0.0470281, 17.3387, 30.067, -8.47616)
 
 [node name="fish" parent="." instance=ExtResource("2_pwssy")]
 transform = Transform3D(-0.129004, 0, -0.991645, 0, 1, 0, 0.991645, 0, -0.129004, -0.811378, -0.579789, -2.30055)
@@ -182,10 +185,6 @@ shape = SubResource("ConcavePolygonShape3D_0pxnp")
 [node name="mopFINAL" parent="DirectionalLight3D" instance=ExtResource("13_vnxfa")]
 transform = Transform3D(0.60794, -0.548858, -0.573728, -0.792814, -0.458827, -0.401152, -0.0430664, 0.698736, -0.714082, 16.7874, -15.7045, -21.3512)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-
-[node name="Node2D" parent="SubViewport" instance=ExtResource("5_32fnv")]
-
 [node name="mop" parent="." instance=ExtResource("7_xl2nf")]
 transform = Transform3D(-0.487411, -0.46024, 0.742031, -0.170217, 0.883588, 0.436231, -0.85642, 0.0863174, -0.509011, -8.07793, -3.67928, -14.3585)
 
@@ -199,9 +198,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="7/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_0pxnp")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.998338, -0.0575697, -0.00271492, 0, -0.0471064, 0.99889, -0.0576337, -0.99723, -0.0470281, 17.3387, 30.067, -8.47616)
 
 [node name="MeshInstance3D" parent="." instance=ExtResource("8_7chl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9328, -3.77951, -23.452)

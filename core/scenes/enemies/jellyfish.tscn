@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dyhqmkd8juv14"]
 
 [ext_resource type="Script" path="res://core/scripts/jellyfish.gd" id="1_2w3ew"]
-[ext_resource type="Texture2D" uid="uid://btqh8cjaviscm" path="res://assets/spritesheet/jellyfish-Sheet.png" id="2_vd7n3"]
+[ext_resource type="Texture2D" uid="uid://c6pqytrsu7tol" path="res://assets/spritesheet/jellyfish-Sheet.png" id="2_vd7n3"]
 [ext_resource type="Script" path="res://core/scenes/enemies/death_tutorial.gd" id="3_fljv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qpu5s"]

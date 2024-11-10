@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://coe0bhxg3y1qg"]
+
+[ext_resource type="Script" path="res://core/scripts/move_to_next_level.gd" id="1_ejsu7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_848hm"]
+radius = 32.1585
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(1162, 222)
+script = ExtResource("1_ejsu7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+scale = Vector2(1.12, 1)
+shape = SubResource("CircleShape2D_848hm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

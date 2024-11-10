@@ -61,7 +61,8 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqk8m"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cug62"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78fjs"]
+size = Vector2(52, 20)
 
 [node name="Turtle" type="CharacterBody2D"]
 
@@ -76,4 +77,4 @@ autoplay = "default"
 shape = SubResource("CircleShape2D_mqk8m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_cug62")
+shape = SubResource("RectangleShape2D_78fjs")
