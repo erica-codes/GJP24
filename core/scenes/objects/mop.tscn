@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuh1cwcwsh4ln"]
+[gd_scene load_steps=3 format=3 uid="uid://cuh1cwcwsh4ln"]
 
-[ext_resource type="PackedScene" uid="uid://cadhaly10hqex" path="res://assets/3D/mopmop.fbx" id="1_0q4pk"]
 [ext_resource type="PackedScene" uid="uid://bhvutsnu1qdr" path="res://assets/3D/mopFINAL.fbx" id="2_hp8cb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qnko8"]
-size = Vector3(0.186523, 2.32394, 0.332544)
+size = Vector3(0.186523, 2.61217, 0.332544)
 
 [node name="Node3D" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020777, -0.099215, -0.00383854)
@@ -12,10 +11,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020777, -0.099215, -0.00383
 [node name="mopFINAL" parent="." instance=ExtResource("2_hp8cb")]
 transform = Transform3D(0.988628, 0.150381, 0, -0.150381, 0.988628, 0, 0, 0, 1, 0.133022, 0.099215, 0.0186716)
 
-[node name="mopmop" parent="." instance=ExtResource("1_0q4pk")]
-transform = Transform3D(0.987645, 0.15671, 0, -0.15671, 0.987645, 0, 0, 0, 1, 0.15752, 0, 0)
-visible = false
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.28779, 1.79007, -0.749425, 1.70994, 2.4073, 0.530093, 0.917666, -0.0229104, -2.85611, 0.234195, -0.0384819, -0.0472282)
+transform = Transform3D(-2.28779, 1.79007, -0.749425, 1.70994, 2.4073, 0.530093, 0.917666, -0.0229104, -2.85611, -0.0237769, -0.385404, -0.0439265)
 shape = SubResource("BoxShape3D_qnko8")
