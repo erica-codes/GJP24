@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkjcwl0ptjkj7"]
+[gd_scene load_steps=5 format=3 uid="uid://dkjcwl0ptjkj7"]
 
 [ext_resource type="Script" path="res://core/scripts/ui/main_menu.gd" id="1_nbl1s"]
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_s5lla"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_apaql"]
+[ext_resource type="AudioStream" uid="uid://num4xtrwr0k2" path="res://assets/sounds/2dtheme.wav" id="4_8nrh3"]
 
 [node name="mainMenu" type="Control"]
 layout_mode = 3
@@ -76,6 +77,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_apaql")
 theme_override_font_sizes/font_size = 25
 text = "EXIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8nrh3")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]

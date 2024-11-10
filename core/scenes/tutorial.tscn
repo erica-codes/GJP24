@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=18 format=4 uid="uid://ctb1xom2l2nqr"]
 
+[ext_resource type="Script" path="res://core/scenes/tutorial.gd" id="1_f0i08"]
 [ext_resource type="Script" path="res://core/scripts/ui/timer_2d.gd" id="1_g4ot2"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_jrgjg"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="8_bf686"]
 [ext_resource type="PackedScene" uid="uid://coe0bhxg3y1qg" path="res://core/scenes/move_to_next_level.tscn" id="8_f07ed"]
 [ext_resource type="Script" path="res://core/scripts/player/deathbox.gd" id="10_fgip3"]
+[ext_resource type="AudioStream" uid="uid://num4xtrwr0k2" path="res://assets/sounds/2dtheme.wav" id="13_1rcvg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rallj"]
 texture = ExtResource("6_4cre2")
@@ -64,6 +66,7 @@ sources/2 = SubResource("TileSetAtlasSource_p7i6j")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0bcc3"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_f0i08")
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
 metadata/_edit_vertical_guides_ = [776.0, 778.0]
 
@@ -129,6 +132,9 @@ script = ExtResource("10_fgip3")
 position = Vector2(1, 13)
 scale = Vector2(-5.55797, 5.1636)
 shape = SubResource("RectangleShape2D_0bcc3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_1rcvg")
 
 [connection signal="timeout" from="Timer2d" to="Timer2d" method="_on_timeout"]
 [connection signal="timeout" from="Timer2d" to="deathbox" method="_on_timer_2d_timeout"]
