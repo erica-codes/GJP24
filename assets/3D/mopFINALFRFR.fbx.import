@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://txc1xy4y43bg"
-path="res://.godot/imported/mopFINALFRFR.fbx-7276e66bf2ecfe50ddb5c04f1c0db17c.scn"
+path="res://.godot/imported/mopFINALFRFR.fbx-504c9031105ef57a861ddf856c65e7a6.scn"
 
 [deps]
 
-source_file="res://assets/mopFINALFRFR.fbx"
-dest_files=["res://.godot/imported/mopFINALFRFR.fbx-7276e66bf2ecfe50ddb5c04f1c0db17c.scn"]
+source_file="res://assets/3D/mopFINALFRFR.fbx"
+dest_files=["res://.godot/imported/mopFINALFRFR.fbx-504c9031105ef57a861ddf856c65e7a6.scn"]
 
 [params]
 
