@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://deuvahl4s6f00"]
+[gd_scene load_steps=18 format=3 uid="uid://deuvahl4s6f00"]
 
 [ext_resource type="Script" path="res://core/scripts/player/playerFish.gd" id="1_g2wbk"]
 [ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_87geq"]
 [ext_resource type="Texture2D" uid="uid://dtn1oluyxmnif" path="res://assets/spritesheet/fish death.png" id="3_khtmr"]
 [ext_resource type="AudioStream" uid="uid://b56cxrdc3ktla" path="res://assets/sounds/jumping.wav" id="4_essyi"]
+[ext_resource type="AudioStream" uid="uid://cr1qwt8a1648e" path="res://assets/sounds/spit.wav" id="5_uqh4t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vy5nf"]
 atlas = ExtResource("3_khtmr")
@@ -110,5 +111,9 @@ shape = SubResource("CapsuleShape2D_4h3u2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_essyi")
-volume_db = 6.559
+volume_db = -35.0
 pitch_scale = 2.05
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uqh4t")
+volume_db = -35.0

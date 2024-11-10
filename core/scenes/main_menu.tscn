@@ -74,7 +74,7 @@ text = "EXIT"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_qkmlr")
-volume_db = 0.937
+volume_db = -35.0
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]

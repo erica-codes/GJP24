@@ -1,6 +1,6 @@
 extends Control
 
-var audio_stream = preload("res://assets/sounds/3dandmaintheme.wav")
+var audio_stream = preload("res://assets/sounds/3d.wav")
 @onready var audio_player = $AudioStreamPlayer
 
 # Called when the node enters the scene tree for the first time.

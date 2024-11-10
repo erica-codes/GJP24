@@ -10,9 +10,12 @@ var jump_count = 0
 @onready var fish = $AnimatedSprite2D
 @onready var projectile = load("res://core/scenes/bullet.tscn")
 @onready var main = get_tree().get_root().get_node("fish")
-var audio_stream = preload("res://assets/sounds/3dandmaintheme.wav")
+
+var jump_sfx = preload("res://assets/sounds/jumping.wav")
 @onready var audio_player = $AudioStreamPlayer
 
+var spit_sfx = preload("res://assets/sounds/spit.wav")
+@onready var audio_stream_player_2: AudioStreamPlayer = $AudioStreamPlayer2
 
 var shoot_direction = Vector2(1, 0)  # Initial direction of the bullet (right)
 
@@ -26,6 +29,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	if Input.is_action_just_pressed("spit"):
+		audio_stream_player_2.play()
 		spit()
 	
 	if Input.is_action_just_pressed("jump") and jump_count < MAX_JUMPS:
@@ -50,8 +54,6 @@ func _physics_process(delta: float) -> void:
 func spit(): 
 	# Instantiate the bullet scene
 	var bullet_instance = projectile.instantiate()
-	
-	
 	
 	# Set the bullet's position to the player's position
 	bullet_instance.position = position + Vector2(20, 0)  # Offset the bullet slightly from the player

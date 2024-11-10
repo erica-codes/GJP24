@@ -135,6 +135,7 @@ shape = SubResource("RectangleShape2D_0bcc3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_1rcvg")
+volume_db = -35.0
 
 [connection signal="timeout" from="Timer2d" to="Timer2d" method="_on_timeout"]
 [connection signal="timeout" from="Timer2d" to="deathbox" method="_on_timer_2d_timeout"]

@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=4 uid="uid://r13n7txiptuy"]
+[gd_scene load_steps=14 format=4 uid="uid://r13n7txiptuy"]
 
-[ext_resource type="Script" path="res://core/scenes/level_2.gd" id="1_eehxi"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="2_wpj6k"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/worlds/world.tscn" id="3_1h8yr"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="3_8kma6"]
@@ -10,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bwal7vq88gstl" path="res://core/scenes/death.tscn" id="6_uhuxk"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="7_0xi60"]
 [ext_resource type="Script" path="res://core/scripts/2-3.gd" id="8_eehgx"]
-[ext_resource type="AudioStream" uid="uid://num4xtrwr0k2" path="res://assets/sounds/2dtheme.wav" id="10_7bkva"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ig54"]
 texture = ExtResource("2_wpj6k")
@@ -79,7 +77,6 @@ sources/1 = SubResource("TileSetAtlasSource_f2lfq")
 size = Vector2(20, 85.6038)
 
 [node name="level2" type="Node2D"]
-script = ExtResource("1_eehxi")
 
 [node name="coral1" type="TextureRect" parent="."]
 z_index = 5
@@ -162,9 +159,6 @@ script = ExtResource("8_eehgx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(2.65173, -37.862)
 shape = SubResource("RectangleShape2D_lce0e")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_7bkva")
 
 [connection signal="body_entered" from="Area2D" to="fish" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
