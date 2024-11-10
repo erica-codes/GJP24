@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmft4j4bnrcjs"]
+[gd_scene load_steps=6 format=3 uid="uid://dmft4j4bnrcjs"]
 
 [ext_resource type="Script" path="res://core/scripts/ui/credits.gd" id="1_sdrv7"]
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_f4sr5"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_uw5fq"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="4_wois5"]
+[ext_resource type="AudioStream" uid="uid://num4xtrwr0k2" path="res://assets/sounds/2dtheme.wav" id="5_og36c"]
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -90,5 +91,8 @@ text = "BACK"
 position = Vector2(854, 562)
 scale = Vector2(0.628906, 0.570313)
 texture = ExtResource("4_wois5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_og36c")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
