@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4igbtknc8hfw"]
+
+[ext_resource type="PackedScene" uid="uid://pcqa2ea6xe2j" path="res://assets/3D/tankLONGfinal.fbx" id="1_ydyfo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6njv"]
+size = Vector3(20.0161, 8.19995, 6.0354)
+
+[node name="tank" type="StaticBody3D"]
+
+[node name="tankLONGfinal" parent="." instance=ExtResource("1_ydyfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12476, -1.55457, 1.31482)
+shape = SubResource("BoxShape3D_p6njv")

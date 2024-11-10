@@ -10,7 +10,8 @@ radius = 3.0
 radius = 26.9474
 
 [node name="bullet" type="CharacterBody2D"]
-collision_layer = 4
+collision_layer = 3
+collision_mask = 5
 script = ExtResource("1_lbn48")
 speed = 350.0
 
