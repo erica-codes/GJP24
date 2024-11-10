@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmft4j4bnrcjs"]
 
-[ext_resource type="Script" path="res://core/scripts/credits.gd" id="1_sdrv7"]
+[ext_resource type="Script" path="res://core/scripts/ui/credits.gd" id="1_sdrv7"]
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="2_f4sr5"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="3_uw5fq"]
 [ext_resource type="Texture2D" uid="uid://b86dxy3b1vksq" path="res://assets/world/icon.svg" id="4_wois5"]

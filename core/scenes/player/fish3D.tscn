@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdymd2t2g5omt"]
 
-[ext_resource type="Script" path="res://core/scripts/fish3D.gd" id="1_redwk"]
+[ext_resource type="Script" path="res://core/scripts/player/fish3D.gd" id="1_redwk"]
 [ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_gqabt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v6lkg"]

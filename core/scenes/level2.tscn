@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bwfai6nk0sxm2" path="res://assets/world/[NEW] coral background.png" id="5_otipe"]
 [ext_resource type="PackedScene" uid="uid://bwal7vq88gstl" path="res://core/scenes/death.tscn" id="6_uhuxk"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="7_0xi60"]
-[ext_resource type="Script" path="res://core/scripts/2-3.gd" id="8_eehgx"]
+[ext_resource type="Script" path="res://core/scripts/levels/2-3.gd" id="8_eehgx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ig54"]
 texture = ExtResource("2_wpj6k")

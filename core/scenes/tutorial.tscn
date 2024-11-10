@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://ctb1xom2l2nqr"]
 
-[ext_resource type="Script" path="res://core/scenes/timer_2d.gd" id="1_g4ot2"]
+[ext_resource type="Script" path="res://core/scripts/ui/timer_2d.gd" id="1_g4ot2"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_jrgjg"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/worlds/world.tscn" id="4_onaj4"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="6_4cre2"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="8_bf686"]
 [ext_resource type="PackedScene" uid="uid://coe0bhxg3y1qg" path="res://core/scenes/move_to_next_level.tscn" id="8_f07ed"]
-[ext_resource type="Script" path="res://core/scenes/deathbox.gd" id="10_fgip3"]
+[ext_resource type="Script" path="res://core/scripts/player/deathbox.gd" id="10_fgip3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rallj"]
 texture = ExtResource("6_4cre2")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://deuvahl4s6f00"]
 
-[ext_resource type="Script" path="res://core/scripts/playerFish.gd" id="1_g2wbk"]
+[ext_resource type="Script" path="res://core/scripts/player/playerFish.gd" id="1_g2wbk"]
 [ext_resource type="Texture2D" uid="uid://clsd2uyckyioy" path="res://assets/spritesheet/[NEW] fish for ur fisht.png" id="2_87geq"]
 [ext_resource type="Texture2D" uid="uid://dc6c8qqan7oq2" path="res://assets/spritesheet/fish death.png" id="3_khtmr"]
 

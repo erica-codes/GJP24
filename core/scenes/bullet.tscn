@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dbl16w0u65d36"]
 
-[ext_resource type="Script" path="res://core/scripts/bullet.gd" id="1_lbn48"]
+[ext_resource type="Script" path="res://core/scripts/objects/bullet.gd" id="1_lbn48"]
 [ext_resource type="Texture2D" uid="uid://fx30j23thtyu" path="res://assets/png/pellet.png" id="2_k8g2h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0exut"]
@@ -11,6 +11,7 @@ radius = 26.9474
 
 [node name="bullet" type="CharacterBody2D"]
 script = ExtResource("1_lbn48")
+speed = 350.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 1.49012e-08)
