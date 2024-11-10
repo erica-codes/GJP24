@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs013rpgwddln"]
+
+[ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="1_7ub00"]
+[ext_resource type="Script" path="res://core/scenes/death_5.gd" id="1_kg0g1"]
+[ext_resource type="Script" path="res://core/scenes/level5-6.gd" id="2_3sn3t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcxrb"]
+size = Vector2(1158, 19)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bc5ku"]
+radius = 28.0
+height = 144.0
+
+[node name="level_5" type="Node2D"]
+
+[node name="deathbox" type="Area2D" parent="."]
+script = ExtResource("1_kg0g1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathbox"]
+position = Vector2(579, 636.5)
+shape = SubResource("RectangleShape2D_rcxrb")
+
+[node name="nextlevel" type="Area2D" parent="."]
+script = ExtResource("2_3sn3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nextlevel"]
+position = Vector2(1146, 547)
+shape = SubResource("CapsuleShape2D_bc5ku")
+
+[node name="fish" parent="." instance=ExtResource("1_7ub00")]
+position = Vector2(70, 151)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="deathbox" to="deathbox" method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="deathbox" method="_on_timer_timeout"]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=4 uid="uid://dncf4h60a0u1p"]
+[gd_scene load_steps=16 format=4 uid="uid://dncf4h60a0u1p"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_gvjjw"]
+[ext_resource type="Script" path="res://core/scripts/levels/level_3.gd" id="1_ynm57"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_a71iy"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="3_tnq34"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="4_re6h0"]
 [ext_resource type="Script" path="res://core/scripts/ui/text_effect.gd" id="5_dq32v"]
+[ext_resource type="Script" path="res://core/scenes/3-4.gd" id="5_hero8"]
+[ext_resource type="Script" path="res://core/scenes/animation_player.gd" id="7_x84xx"]
+[ext_resource type="AudioStream" uid="uid://bw82g8uefpyx" path="res://assets/sfx/typing-sound-02-229861.mp3" id="8_jxopc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsbof"]
 texture = ExtResource("3_tnq34")
@@ -33,7 +37,45 @@ sources/0 = SubResource("TileSetAtlasSource_lsbof")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vym8u"]
 
+[sub_resource type="Animation" id="Animation_tp7c1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_p81dh"]
+resource_name = "typing"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bql1v"]
+_data = {
+"RESET": SubResource("Animation_tp7c1"),
+"typing": SubResource("Animation_p81dh")
+}
+
 [node name="level3" type="Node2D"]
+script = ExtResource("1_ynm57")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 331)
@@ -58,6 +100,7 @@ position = Vector2(67, 572)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1140, 354)
 scale = Vector2(9.52764, 30.7734)
+script = ExtResource("5_hero8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_vym8u")
@@ -78,4 +121,18 @@ theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "[center] Strawberry Poo Studios
 presents.."
+visible_characters = 0
+visible_ratio = 0.0
 script = ExtResource("5_dq32v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bql1v")
+}
+script = ExtResource("7_x84xx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jxopc")
+volume_db = -25.338
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
