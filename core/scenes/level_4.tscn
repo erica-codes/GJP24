@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://ki0oeebqcq5u"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_wr6sg"]
@@ -9,3 +10,17 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_wr6sg")
 expand_mode = 1
+||||||| Stash base
+=======
+[gd_scene load_steps=2 format=3 uid="uid://cvo1sab1doosm"]
+
+[ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_wr6sg"]
+
+[node name="level4" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_wr6sg")
+expand_mode = 1
+>>>>>>> Stashed changes
