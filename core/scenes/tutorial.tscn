@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://ctb1xom2l2nqr"]
+[gd_scene load_steps=16 format=4 uid="uid://ctb1xom2l2nqr"]
 
+[ext_resource type="Script" path="res://core/scenes/timer_2d.gd" id="1_g4ot2"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_jrgjg"]
 [ext_resource type="PackedScene" uid="uid://ds0l5a7bn3vy6" path="res://core/scenes/enemies/eel.tscn" id="3_t7nse"]
 [ext_resource type="PackedScene" uid="uid://ctsxy8sa5bwjc" path="res://core/scenes/worlds/world.tscn" id="4_onaj4"]
@@ -9,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://30k0o1yce4so" path="res://assets/tileset/[NEW] Fish world tileset-Sheet.png" id="6_4cre2"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="8_bf686"]
 [ext_resource type="PackedScene" uid="uid://coe0bhxg3y1qg" path="res://core/scenes/move_to_next_level.tscn" id="8_f07ed"]
+[ext_resource type="Script" path="res://core/scenes/deathbox.gd" id="10_fgip3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rallj"]
 texture = ExtResource("6_4cre2")
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
@@ -21,11 +22,8 @@ texture = ExtResource("6_4cre2")
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:3/0 = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
@@ -37,25 +35,15 @@ texture = ExtResource("6_4cre2")
 7:3/0 = 0
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:4/0 = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:5/0 = 0
-4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7i6j"]
 texture = ExtResource("8_bf686")
@@ -73,9 +61,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_rallj")
 sources/2 = SubResource("TileSetAtlasSource_p7i6j")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bcc3"]
+
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-12.0, -33.0, -19.0, 652.0]
 metadata/_edit_vertical_guides_ = [776.0, 778.0]
+
+[node name="Timer2d" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+script = ExtResource("1_g4ot2")
 
 [node name="World" parent="." instance=ExtResource("4_onaj4")]
 
@@ -121,9 +116,21 @@ position = Vector2(977, 283)
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-31, 8)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAAAABIAAAAEAAQAAAAAABEAAAAEAAQAAAAAABAAAAAEAAQAAAAAAA8AAAAEAAQAAAAAAA4AAAAEAAQAAAAAAA0AAAAEAAQAAAAAAAwAAAAEAAQAAAAAAAsAAAAEAAQAAAAAAAoAAAAEAAQAAAAAAAkAAAAEAAQAAAAAAAgAAAAEAAQAAAAAAAcAAAAEAAQAAAAAAAYAAAAEAAQAAAAAAAUAAAAEAAQAAAAAAAQAAAAEAAQAAAAAAAMAAAAEAAQAAAAAAAIAAAAEAAQAAAAAAAEAAAAEAAQAAAAAAAAAAAAEAAQAAAAAAP//AAAAAAUAAAABAP//AAAAAAUAAAACAP//AAAAAAUAAAADAP//AAAAAAUAAAAEAP//AAAAAAUAAAAFAP//AAAAAAUAAAAGAP//AAAAAAUAAAAHAP//AAAAAAUAAAAIAP//AAAAAAUAAAAJAP//AAAAAAUAAAAKAP//AAAAAAUAAAALAP//AAAAAAUAAAAMAP//AAAAAAUAAAANAP//AAAAAAUAAAAOAP//AAAAAAUAAAAPAP//AAAAAAUAAAAQAP//AAAAAAUAAAARAP//AAAAAAUAAAASAP//AAAAAAUAAAATAP//AAAAAAUAAAAUAP//AAAAAAUAAAAVAP//AAAAAAUAAAAWAP//AAAAAAUAAAAXAP//AAAAAAUAAAAYAP//AAAAAAUAAAAZAP//AAAAAAUAAAAaAP//AAAAAAUAAAAbAP//AAAAAAUAAAAcAP//AAAAAAUAAAAdAP//AAAAAAUAAAAeAP//AAAAAAUAAAAfAP//AAAAAAUAAAAgAP//AAAAAAUAAAAhAP//AAAAAAUAAAAiAP//AAAAAAUAAAAjAP//AAAAAAUAAAAkAP//AAAAAAUAAAAlAP//AAAAAAUAAAAlAAkAAAADAAMAAAAlAAoAAAAEAAQAAAAlAAsAAAAEAAQAAAAlAAwAAAAEAAQAAAAlAA0AAAAEAAQAAAAYABQAAAAFAAQAAAAYABMAAAAFAAQAAAAXABMAAAAFAAQAAAAXABQAAAAFAAQAAAAXABUAAAAFAAQAAAAXABYAAAAFAAQAAAAYABUAAAAFAAQAAAAYABYAAAAFAAQAAAAZABMAAAAFAAQAAAAZABQAAAAFAAQAAAAZABUAAAAFAAQAAAAZABYAAAAFAAQAAAAaABMAAAAFAAQAAAAaABQAAAAFAAQAAAAaABUAAAAFAAQAAAAaABYAAAAFAAQAAAAAABYAAAAEAAUAAAAAABMAAAAEAAQAAAAAABQAAAAEAAQAAAAAABUAAAAEAAQAAAAlAAEAAAAEAAQAAAAlAAIAAAAEAAQAAAAlAAMAAAAEAAQAAAAlAAQAAAAEAAUAAAAlAAAAAAAEAAQAAAAfAAkAAAAFAAMAAAAgAAkAAAAHAAMAAAAeAAkAAAADAAMAAAAeAAoAAAAEAAUAAAAgAAoAAAAGAAUAAAAfAAoAAAAFAAUAAAAlAA4AAAAEAAQAAAAlAA8AAAAEAAQAAAAlABAAAAAEAAQAAAAlABEAAAAEAAQAAAAlABIAAAAEAAQAAAAlABMAAAAEAAQAAAAlABQAAAAEAAQAAAAlABUAAAAEAAQAAAAlABYAAAAEAAQAAAA=")
+tile_map_data = PackedByteArray("AAAAABIAAAAEAAQAAAAAABEAAAAEAAQAAAAAABAAAAAEAAQAAAAAAA8AAAAEAAQAAAAAAA4AAAAEAAQAAAAAAA0AAAAEAAQAAAAAAAwAAAAEAAQAAAAAAAsAAAAEAAQAAAAAAAoAAAAEAAQAAAAAAAkAAAAEAAQAAAAAAAgAAAAEAAQAAAAAAAcAAAAEAAQAAAAAAAYAAAAEAAQAAAAAAAUAAAAEAAQAAAAAAAQAAAAEAAQAAAAAAAMAAAAEAAQAAAAAAAIAAAAEAAQAAAAAAAEAAAAEAAQAAAAAAAAAAAAEAAQAAAAAAP//AAAAAAUAAAABAP//AAAAAAUAAAACAP//AAAAAAUAAAADAP//AAAAAAUAAAAEAP//AAAAAAUAAAAFAP//AAAAAAUAAAAGAP//AAAAAAUAAAAHAP//AAAAAAUAAAAIAP//AAAAAAUAAAAJAP//AAAAAAUAAAAKAP//AAAAAAUAAAALAP//AAAAAAUAAAAMAP//AAAAAAUAAAANAP//AAAAAAUAAAAOAP//AAAAAAUAAAAPAP//AAAAAAUAAAAQAP//AAAAAAUAAAARAP//AAAAAAUAAAASAP//AAAAAAUAAAATAP//AAAAAAUAAAAUAP//AAAAAAUAAAAVAP//AAAAAAUAAAAWAP//AAAAAAUAAAAXAP//AAAAAAUAAAAYAP//AAAAAAUAAAAZAP//AAAAAAUAAAAaAP//AAAAAAUAAAAbAP//AAAAAAUAAAAcAP//AAAAAAUAAAAdAP//AAAAAAUAAAAeAP//AAAAAAUAAAAfAP//AAAAAAUAAAAgAP//AAAAAAUAAAAhAP//AAAAAAUAAAAiAP//AAAAAAUAAAAjAP//AAAAAAUAAAAkAP//AAAAAAUAAAAlAP//AAAAAAUAAAAlAAkAAAADAAMAAAAlAAoAAAAEAAQAAAAlAAsAAAAEAAQAAAAlAAwAAAAEAAQAAAAlAA0AAAAEAAQAAAAYABQAAAAFAAQAAAAYABMAAAAFAAQAAAAXABMAAAAFAAQAAAAXABQAAAAFAAQAAAAXABUAAAAFAAQAAAAXABYAAAAFAAQAAAAYABUAAAAFAAQAAAAYABYAAAAFAAQAAAAZABMAAAAFAAQAAAAZABQAAAAFAAQAAAAZABUAAAAFAAQAAAAZABYAAAAFAAQAAAAaABMAAAAFAAQAAAAaABQAAAAFAAQAAAAaABUAAAAFAAQAAAAaABYAAAAFAAQAAAAAABYAAAAEAAUAAAAAABMAAAAEAAQAAAAAABQAAAAEAAQAAAAAABUAAAAEAAQAAAAlAAEAAAAEAAQAAAAlAAIAAAAEAAQAAAAlAAMAAAAEAAQAAAAlAAQAAAAEAAUAAAAlAAAAAAAEAAQAAAAfAAkAAAAFAAMAAAAgAAkAAAAHAAMAAAAeAAkAAAADAAMAAAAeAAoAAAAEAAUAAAAgAAoAAAAGAAUAAAAfAAoAAAAFAAUAAAAlAA4AAAAEAAQAAAAlAA8AAAAEAAQAAAAlABAAAAAEAAQAAAAlABEAAAAEAAQAAAAlABIAAAAEAAQAAAAlABMAAAAEAAQAAAAlABQAAAAEAAQAAAAlABUAAAAEAAQAAAAlABYAAAAEAAQAAAABABMAAAADAAMAAAACABMAAAAEAAEAAAADABMAAAAEAAEAAAAEABMAAAAEAAEAAAAFABMAAAAEAAEAAAAGABMAAAAEAAEAAAAHABMAAAAEAAEAAAAIABMAAAAEAAEAAAAJABMAAAAEAAEAAAAKABMAAAAEAAEAAAALABMAAAAEAAEAAAAMABMAAAAEAAEAAAANABMAAAAEAAEAAAAOABMAAAAEAAEAAAAPABMAAAAEAAEAAAAQABMAAAAEAAEAAAARABMAAAAEAAEAAAASABMAAAAEAAEAAAATABMAAAAEAAEAAAAUABMAAAAEAAEAAAAVABMAAAAEAAEAAAAWABMAAAAEAAEAAAAbABMAAAAEAAEAAAAcABMAAAAEAAEAAAAdABMAAAAEAAEAAAAeABMAAAAEAAEAAAAfABMAAAAEAAEAAAAgABMAAAAEAAEAAAAhABMAAAAEAAEAAAAiABMAAAAEAAEAAAAjABMAAAAEAAEAAAAkABMAAAAEAAEAAAA=")
 tile_set = SubResource("TileSet_ngfd1")
 
 [node name="Area2D" parent="." instance=ExtResource("8_f07ed")]
 
+[node name="deathbox" type="Area2D" parent="."]
+position = Vector2(768, 674)
+script = ExtResource("10_fgip3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathbox"]
+position = Vector2(1, 13)
+scale = Vector2(-5.55797, 5.1636)
+shape = SubResource("RectangleShape2D_0bcc3")
+
+[connection signal="timeout" from="Timer2d" to="Timer2d" method="_on_timeout"]
+[connection signal="timeout" from="Timer2d" to="deathbox" method="_on_timer_2d_timeout"]
 [connection signal="body_entered" from="Area2D" to="fish" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="deathbox" to="deathbox" method="_on_body_entered"]
