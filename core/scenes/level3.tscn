@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dncf4h60a0u1p"]
+[gd_scene load_steps=9 format=4 uid="uid://dncf4h60a0u1p"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_gvjjw"]
 [ext_resource type="PackedScene" uid="uid://deuvahl4s6f00" path="res://core/scenes/player/fish2D.tscn" id="2_a71iy"]
 [ext_resource type="Texture2D" uid="uid://hnlybilqcpda" path="res://assets/tileset/Fish world tilesett-Sheet.png" id="3_tnq34"]
-[ext_resource type="PackedScene" uid="uid://coe0bhxg3y1qg" path="res://core/scenes/move_to_next_level.tscn" id="4_xuo4c"]
+[ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="4_re6h0"]
+[ext_resource type="Script" path="res://core/scripts/text_effect.gd" id="5_dq32v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lsbof"]
 texture = ExtResource("3_tnq34")
@@ -30,6 +31,8 @@ texture = ExtResource("3_tnq34")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lsbof")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_vym8u"]
+
 [node name="level3" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -52,5 +55,27 @@ tile_set = SubResource("TileSet_4fbhu")
 [node name="fish" parent="." instance=ExtResource("2_a71iy")]
 position = Vector2(67, 572)
 
-[node name="Area2D" parent="." instance=ExtResource("4_xuo4c")]
-position = Vector2(1131, 491)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1140, 354)
+scale = Vector2(9.52764, 30.7734)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vym8u")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 570.0
+offset_top = 217.0
+offset_right = 1047.0
+offset_bottom = 383.0
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.783621, 0.154528, 0.322711, 1)
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/normal_font = ExtResource("4_re6h0")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[center] Strawberry Poo Studios
+presents.."
+script = ExtResource("5_dq32v")
