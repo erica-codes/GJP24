@@ -115,6 +115,7 @@ position = Vector2(746, 805)
 
 [node name="Turtle" parent="." instance=ExtResource("5_70wl6")]
 position = Vector2(977, 283)
+scale = Vector2(2, 2)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-31, 8)

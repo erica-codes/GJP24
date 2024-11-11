@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://mfm5nptluc30"]
+[gd_scene load_steps=4 format=3 uid="uid://mfm5nptluc30"]
 
 [ext_resource type="Texture2D" uid="uid://bm3iq7gc5gc0c" path="res://assets/world/cUI coral background-Sheet.png" id="1_ua1ln"]
+[ext_resource type="Script" path="res://core/scenes/level_6.gd" id="1_yx0bw"]
 [ext_resource type="FontFile" uid="uid://dvsopba2tyw0a" path="res://assets/world/Super Kinds.ttf" id="2_aso5v"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_yx0bw")
 
 [node name="CUiCoralBackground-sheet" type="Sprite2D" parent="."]
 position = Vector2(577, 329)
@@ -22,3 +24,24 @@ theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
 text = "
 [center] [wave]Thank you for playing this short demo!"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 544.0
+offset_top = 475.0
+offset_right = 624.0
+offset_bottom = 525.0
+theme_override_fonts/font = ExtResource("2_aso5v")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[node name="returntomenu" type="Button" parent="."]
+offset_left = 445.0
+offset_top = 421.0
+offset_right = 717.0
+offset_bottom = 471.0
+theme_override_fonts/font = ExtResource("2_aso5v")
+theme_override_font_sizes/font_size = 30
+text = "RETURN TO MENU"
+
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="returntomenu" to="." method="_on_returntomenu_pressed"]

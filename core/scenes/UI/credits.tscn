@@ -48,10 +48,10 @@ metadata/_edit_use_anchors_ = true
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.742576
-anchor_top = 0.464506
-anchor_right = 0.742576
-anchor_bottom = 0.712963
+anchor_left = 0.698306
+anchor_top = 0.470679
+anchor_right = 0.779903
+anchor_bottom = 0.719136
 offset_left = -171.448
 offset_top = -107.0
 offset_right = 171.552
@@ -68,7 +68,7 @@ Erica Barundia
 Lead Pixel 2D Artist & Level Designer
 Mikaela Guce
 
-Lead 3D Artist & Level Designer
+Lead 3D Artist & Lead Designer
 Ysabeli Hilario
 
 UI & Original Soundtrack
